@@ -10,9 +10,22 @@ import UIKit
 class AddViewController: UIViewController {
 
     
+    @IBOutlet var textField: UITextField!
+    var text: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        if let text = text {
+            textField.text = text
+        }
     }
+    
+    @IBAction func tabSaveBuuton(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+    }
+    
 }
