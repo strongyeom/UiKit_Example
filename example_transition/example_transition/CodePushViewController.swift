@@ -13,10 +13,13 @@ class CodePushViewController: UIViewController {
 
     
     @IBOutlet var nameLabel: UILabel!
+    var text: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        if let text = text {
+            nameLabel.text = text
+        }
         
     }
 

@@ -11,10 +11,12 @@ import UIKit
 class SeguePresentViewController: UIViewController {
 
     @IBOutlet var nameLabel: UILabel!
-    
+    var text: String?
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        if let text = text {
+            nameLabel.text = text
+        }
     }
     
     /// Segue_present로 연결 되어 있을때는 dismiss 메소드를 이용하면 된다.

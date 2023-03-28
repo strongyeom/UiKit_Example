@@ -66,11 +66,11 @@
 			children = (
 				26A1E76B29D30792009568AD /* AppDelegate.swift */,
 				26A1E76D29D30792009568AD /* SceneDelegate.swift */,
-				26A1E76F29D30792009568AD /* ViewController.swift */,
 				26A1E77129D30792009568AD /* Main.storyboard */,
 				26A1E77429D30794009568AD /* Assets.xcassets */,
 				26A1E77629D30794009568AD /* LaunchScreen.storyboard */,
 				26A1E77929D30794009568AD /* Info.plist */,
+				26A1E76F29D30792009568AD /* ViewController.swift */,
 				26A1E77F29D3114E009568AD /* SeguePushViewController.swift */,
 				26A1E78129D3129B009568AD /* SeguePresentViewController.swift */,
 				26A1E78329D31381009568AD /* CodePushViewController.swift */,
