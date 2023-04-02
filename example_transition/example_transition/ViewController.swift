@@ -7,7 +7,7 @@
 
 import UIKit
 
-
+// delegate를 사용하여 데이터를 전달 할 수있다.
 // 데이터를 받는 쪽에서 프로토콜을 구현한다.
 class ViewController: UIViewController, CodePresentDelegate {
     
