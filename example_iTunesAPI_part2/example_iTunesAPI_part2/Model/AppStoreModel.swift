@@ -77,7 +77,7 @@ struct ITunes: Codable {
     
     // 사용가능 언어 갯수
     var languageCount: String? {
-        return "+ \(languageCodesISO2A!.count-1)"
+        return "+ \(languageCodesISO2A!.count-1)개 언어"
     }
     
     // 카테고리 별 케이스

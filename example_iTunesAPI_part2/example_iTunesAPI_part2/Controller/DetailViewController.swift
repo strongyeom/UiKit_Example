@@ -27,7 +27,8 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var languageCode: UILabel!
     @IBOutlet weak var languageCount: UILabel!
-    
+  
+    @IBOutlet var screenShotsCollection: [UIImageView]!
     
     var appStores: ITunes?
     
@@ -53,12 +54,14 @@ class DetailViewController: UIViewController {
         }
     }
 
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         print("DetailViewController - \(String(describing: appStores))")
         iconImageView.layer.cornerRadius = 12
         setupDetailView()
+        for screenShot in screenShotsCollection {
+            screenShot.backgroundColor = .green
+        }
     }
     
     func setupDetailView() {
@@ -76,14 +79,27 @@ class DetailViewController: UIViewController {
         artisName.text = appStores?.artistName
         languageCode.text = appStores?.languageCodesISO2A![0]
         languageCount.text = appStores?.languageCount
-        
-        
-        
-        
     }
     
+//    var oneOfManyScreenShot: String? {
+//        didSet {
+//            setupLoadImage()
+//        }
+//    }
     
-    
-    
-    
+//    func setupLoadImage() {
+//
+//        guard let urlString = oneOfManyScreenShot, let url = URL(string: urlString) else { return }
+//
+//        DispatchQueue.global().async {
+//            guard let data = try? Data(contentsOf: url) else { return }
+//
+//            guard urlString == url.absoluteString else { return }
+//            DispatchQueue.main.async {
+//                for screenShot in self.screenShotsCollection {
+//                    screenShot.image = UIImage(data: data)
+//                }
+//            }
+//        }
+//    }
 }
