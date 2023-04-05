@@ -63,6 +63,15 @@ class ViewController: UIViewController {
             }
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        // 어떤 cell이 눌렸는지 확인가능
+        if let cell = sender as? CollectionViewCell, let indexPath = collectionView.indexPath(for: cell) {
+            let viewController = segue.destination as! DetailViewController
+            viewController.appStores = appStores[indexPath.item]
+        }
+    }
 
 
 }
@@ -75,7 +84,7 @@ extension ViewController : UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
         
-        cell.imageIconUrl = appStores[indexPath.item].artworkUrl100
+        cell.imageIconUrl = appStores[indexPath.item].artworkUrl60
         cell.mainLabel.text = appStores[indexPath.item].trackName
         cell.subLabel.text = appStores[indexPath.item].description
         cell.reviewLabel.text = appStores[indexPath.item].averageRating

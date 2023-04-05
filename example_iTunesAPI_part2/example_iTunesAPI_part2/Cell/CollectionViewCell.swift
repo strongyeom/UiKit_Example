@@ -54,7 +54,7 @@ class CollectionViewCell: UICollectionViewCell {
         downLoadButton.layer.cornerRadius = 12
     }
     
-    
+    /// IconImage 세팅하는 메서드
     func loadImage() {
         
         guard let urlString = imageIconUrl, let url = URL(string: urlString) else { return }
@@ -71,6 +71,7 @@ class CollectionViewCell: UICollectionViewCell {
         }
     }
     
+    /// 첫번째 스샷 세팅하는 메서드
     func firstScreenShotLoadImage() {
         
         guard let urlString = firstScreenShotUrl, let url = URL(string: urlString) else { return }
@@ -86,7 +87,7 @@ class CollectionViewCell: UICollectionViewCell {
             }
         }
     }
-    
+    /// 두번째 스샷 세팅하는 메서드
     func secondScreenShotLoadImage() {
         
         guard let urlString = secondScreenShotUrl, let url = URL(string: urlString) else { return }
@@ -102,7 +103,7 @@ class CollectionViewCell: UICollectionViewCell {
             }
         }
     }
-    
+    /// 세번째 스샷 세팅하는 메서드
     func thirdScreenShotLoadImage() {
         
         guard let urlString = thirdScreenShotUrl, let url = URL(string: urlString) else { return }
@@ -126,6 +127,7 @@ class CollectionViewCell: UICollectionViewCell {
     
     
     override func prepareForReuse() {
+        super.prepareForReuse()
         self.iconImage.image = nil
         self.screenShot1.image = nil
         self.screenShot2.image = nil
