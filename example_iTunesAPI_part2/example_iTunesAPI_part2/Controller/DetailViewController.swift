@@ -97,6 +97,15 @@ class DetailViewController: UIViewController {
         
     }
     
+    // 이미지를 눌렀을때 터치 액션
+    @objc func imageTapped() {
+        print("이미지가 터치 되었습니다1.")
+        let viewController = self.storyboard?.instantiateViewController(withIdentifier: "FullScreenViewController") as! FullScreenViewController
+        viewController.modalPresentationStyle = .fullScreen
+        viewController.imageUrl = appStores?.screenshotUrls
+        self.present(viewController, animated: true)
+    }
+    
     func setupDetailImage() {
         var a1: [URL] = []
         
@@ -119,6 +128,10 @@ class DetailViewController: UIViewController {
                     DispatchQueue.main.async {
                         self.screenShotCollection[j].image = UIImage(data: data)
                         self.screenShotCollection[j].layer.cornerRadius = 8
+                        // 스토리보드에서 userInteractionEnalbed 체크해주고 true로 설정
+                        self.screenShotCollection[j].isUserInteractionEnabled = true
+                        // 이미지를 탭 제스처를 했을때 실행할 메서드
+                        self.screenShotCollection[j].addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.imageTapped)))
                     }
                 }
             } else {
@@ -126,7 +139,8 @@ class DetailViewController: UIViewController {
             }
         }
     }
-    
+
+    /// 더보기 버튼을 눌렀을때 description창 늘어남
     @IBAction func tabButtonClicked(_ sender: UIButton) {
         
         self.detailDescriptionHeight.priority = .defaultHigh

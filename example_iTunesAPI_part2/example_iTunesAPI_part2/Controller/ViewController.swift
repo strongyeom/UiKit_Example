@@ -85,8 +85,8 @@ extension ViewController : UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
         
         cell.imageIconUrl = appStores[indexPath.item].artworkUrl60
-        cell.mainLabel.text = appStores[indexPath.item].trackName!.localized()
-        cell.subLabel.text = appStores[indexPath.item].description!.localized()
+        cell.mainLabel.text = appStores[indexPath.item].trackName
+        cell.subLabel.text = appStores[indexPath.item].description
         cell.reviewLabel.text = appStores[indexPath.item].averageRating
         
         let screenShots = appStores[indexPath.item].screenshotUrls
