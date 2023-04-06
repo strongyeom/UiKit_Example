@@ -793,6 +793,64 @@
             <point key="canvasLocation" x="2135.8778625954196" y="200"/>
         </scene>
         <!--Full Screen View Controller-->
+        <scene sceneID="yKN-CW-sp6">
+            <objects>
+                <viewController id="f9A-i5-ZPb" customClass="FullScreenViewController" customModule="example_iTunesAPI_part2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3AX-2s-kki">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="CWx-rw-Cq5">
+                                <rect key="frame" x="0.0" y="109" width="393" height="709"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1A9-uc-9Yy">
+                                    <size key="itemSize" width="393" height="362"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FullScreenImageCollectionViewCell" id="9EB-nq-Uqv" customClass="FullScreenImageCollectionViewCell" customModule="example_iTunesAPI_part2" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="362"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="8c8-8L-Tg3">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="362"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TFw-5l-Mnv">
+                                                    <rect key="frame" x="0.0" y="0.0" width="393" height="362"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="TFw-5l-Mnv" firstAttribute="leading" secondItem="8c8-8L-Tg3" secondAttribute="leading" id="64I-Du-rWW"/>
+                                                <constraint firstItem="TFw-5l-Mnv" firstAttribute="top" secondItem="8c8-8L-Tg3" secondAttribute="top" id="Obt-Kb-Eib"/>
+                                                <constraint firstAttribute="bottom" secondItem="TFw-5l-Mnv" secondAttribute="bottom" id="xdW-OB-qYN"/>
+                                                <constraint firstAttribute="trailing" secondItem="TFw-5l-Mnv" secondAttribute="trailing" id="z5y-nL-0tl"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="393" height="362"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Rr-Nn-w9c"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Rr-Nn-w9c" firstAttribute="trailing" secondItem="CWx-rw-Cq5" secondAttribute="trailing" id="EDH-3I-KT4"/>
+                            <constraint firstItem="6Rr-Nn-w9c" firstAttribute="bottom" secondItem="CWx-rw-Cq5" secondAttribute="bottom" id="I5S-9v-0PL"/>
+                            <constraint firstItem="CWx-rw-Cq5" firstAttribute="top" secondItem="6Rr-Nn-w9c" secondAttribute="top" constant="50" id="Ndg-xA-yXx"/>
+                            <constraint firstItem="CWx-rw-Cq5" firstAttribute="leading" secondItem="6Rr-Nn-w9c" secondAttribute="leading" id="rFD-T4-lKC"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="fullCollectionView" destination="CWx-rw-Cq5" id="oEc-be-GoJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jlB-vi-rVu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3635.8778625954196" y="427.46478873239437"/>
+        </scene>
+        <!--Full Screen View Controller-->
         <scene sceneID="sXZ-fp-nzV">
             <objects>
                 <viewController storyboardIdentifier="FullScreenViewController" id="NT1-im-EPR" customClass="FullScreenViewController" customModule="example_iTunesAPI_part2" customModuleProvider="target" sceneMemberID="viewController">
@@ -892,67 +950,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FBc-R2-9t4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3675" y="-305"/>
-        </scene>
-        <!--Full Screen Collection View Controller-->
-        <scene sceneID="ybV-5l-VvF">
-            <objects>
-                <viewController id="lvL-NW-PwZ" customClass="CFullScreenCollectionViewController" customModule="example_iTunesAPI_part2" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="7V8-Fq-gjm">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="2qV-JD-Mee">
-                                <rect key="frame" x="0.0" y="109" width="393" height="709"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Ywb-hP-A6K">
-                                    <size key="itemSize" width="393" height="421"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="odZ-IH-7Yq">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="421"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="24T-3p-eJc">
-                                            <rect key="frame" x="0.0" y="0.0" width="393" height="421"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YVe-oj-C5r">
-                                                    <rect key="frame" x="0.0" y="0.0" width="393" height="421"/>
-                                                </imageView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="YVe-oj-C5r" firstAttribute="leading" secondItem="24T-3p-eJc" secondAttribute="leading" id="JK0-WQ-ogd"/>
-                                                <constraint firstAttribute="trailing" secondItem="YVe-oj-C5r" secondAttribute="trailing" id="nxP-Bc-ziM"/>
-                                                <constraint firstAttribute="bottom" secondItem="YVe-oj-C5r" secondAttribute="bottom" id="tP0-GE-GKM"/>
-                                                <constraint firstItem="YVe-oj-C5r" firstAttribute="top" secondItem="24T-3p-eJc" secondAttribute="top" id="zFH-Pe-vj8"/>
-                                            </constraints>
-                                        </collectionViewCellContentView>
-                                        <size key="customSize" width="393" height="421"/>
-                                    </collectionViewCell>
-                                </cells>
-                            </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PWE-Da-pFp">
-                                <rect key="frame" x="302" y="66" width="75" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                            </button>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="THv-vp-PtB"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="THv-vp-PtB" firstAttribute="trailing" secondItem="2qV-JD-Mee" secondAttribute="trailing" id="Dgf-aO-NG4"/>
-                            <constraint firstItem="2qV-JD-Mee" firstAttribute="top" secondItem="THv-vp-PtB" secondAttribute="top" constant="50" id="Gob-Vi-x2e"/>
-                            <constraint firstItem="THv-vp-PtB" firstAttribute="bottom" secondItem="2qV-JD-Mee" secondAttribute="bottom" id="PCl-zR-eFi"/>
-                            <constraint firstItem="2qV-JD-Mee" firstAttribute="leading" secondItem="THv-vp-PtB" secondAttribute="leading" id="mfo-KY-tIo"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1WN-A7-pyX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3654.1984732824426" y="409.85915492957747"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="U1v-GP-VrS">
