@@ -199,27 +199,30 @@
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jVt-a4-och">
-                                                                        <rect key="frame" x="0.0" y="33" width="100" height="28"/>
+                                                                        <rect key="frame" x="0.0" y="33" width="100" height="30"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="H3l-Pg-aS8">
-                                                                        <rect key="frame" x="0.0" y="71" width="100" height="29"/>
+                                                                        <rect key="frame" x="0.0" y="73" width="100" height="27"/>
                                                                         <subviews>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w9E-6t-ePi">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="63.333333333333336" height="29"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="55.333333333333336" height="27"/>
                                                                                 <color key="backgroundColor" systemColor="linkColor"/>
-                                                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
                                                                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                                 <state key="normal" title="받기">
                                                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                 </state>
+                                                                                <connections>
+                                                                                    <action selector="downLoadButtonClicked:" destination="mx1-ys-v6s" eventType="touchUpInside" id="hKU-Eb-Ve4"/>
+                                                                                </connections>
                                                                             </button>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="앱 내 구입" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iYN-wO-Qgj">
-                                                                                <rect key="frame" x="71.333333333333343" y="0.0" width="28.666666666666671" height="29"/>
-                                                                                <fontDescription key="fontDescription" type="system" pointSize="7"/>
-                                                                                <nil key="textColor"/>
+                                                                                <rect key="frame" x="63.333333333333343" y="0.0" width="36.666666666666657" height="27"/>
+                                                                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                                                                <color key="textColor" systemColor="systemGray2Color"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                         </subviews>
@@ -763,6 +766,7 @@
                         <outlet property="detailDescription" destination="HWL-BC-0WV" id="HeE-ak-TVb"/>
                         <outlet property="detailDescriptionHeight" destination="yX4-pA-FHu" id="d4f-Io-zOA"/>
                         <outlet property="detailReviewAverage" destination="1wV-xI-YnB" id="QAN-YQ-2y8"/>
+                        <outlet property="downLoadButton" destination="w9E-6t-ePi" id="7qj-Ta-hay"/>
                         <outlet property="iconImageView" destination="UWN-Mn-HqN" id="fe1-9t-qQw"/>
                         <outlet property="languageCode" destination="51T-dA-oeB" id="FQQ-Os-yWf"/>
                         <outlet property="languageCount" destination="Awy-m8-Ibs" id="YPa-wU-VwE"/>

@@ -138,7 +138,7 @@ class CollectionViewCell: UICollectionViewCell {
     
     
     @IBAction func tabDownLoadButton(_ sender: UIButton) {
-        print("버튼이 눌렸습니다.")
+        print("메인화면의 버튼이 눌렸습니다.")
     }
     
 }

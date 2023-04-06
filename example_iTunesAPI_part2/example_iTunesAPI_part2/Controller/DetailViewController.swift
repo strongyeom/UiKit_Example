@@ -39,6 +39,9 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var detailReviewAverage: UILabel!
     @IBOutlet weak var detailDescriptionHeight: NSLayoutConstraint!
     
+    @IBOutlet weak var downLoadButton: UIButton!
+    
+    
     var appStores: ITunes?
     
     var imageIconUrl: String? {
@@ -69,7 +72,7 @@ class DetailViewController: UIViewController {
         iconImageView.layer.cornerRadius = 12
         setupDetailView()
         setupDetailImage()
-        
+        downLoadButton.layer.cornerRadius = 12
     }
     
     func setupDetailView() {
@@ -132,6 +135,9 @@ class DetailViewController: UIViewController {
         self.view.layoutIfNeeded()
     }
     
+    @IBAction func downLoadButtonClicked(_ sender: UIButton) {
+        print("DetailViewController - 버튼이 눌렸습니다.")
+    }
     
 }
 
