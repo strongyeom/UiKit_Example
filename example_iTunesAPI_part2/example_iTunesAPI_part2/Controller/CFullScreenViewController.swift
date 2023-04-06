@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CFullScreenCollectionViewController: UICollectionView {
+class CFullScreenCollectionViewController: UIViewController {
 
     
     override func viewDidLoad() {
