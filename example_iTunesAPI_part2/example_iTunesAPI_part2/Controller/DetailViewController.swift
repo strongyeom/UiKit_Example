@@ -59,9 +59,9 @@ class DetailViewController: UIViewController {
         print("DetailViewController - \(String(describing: appStores))")
         iconImageView.layer.cornerRadius = 12
         setupDetailView()
-        for screenShot in screenShotsCollection {
-            screenShot.backgroundColor = .green
-        }
+        setupScreenShot()
+        
+        
     }
     
     func setupDetailView() {
@@ -81,25 +81,34 @@ class DetailViewController: UIViewController {
         languageCount.text = appStores?.languageCount
     }
     
-//    var oneOfManyScreenShot: String? {
-//        didSet {
-//            setupLoadImage()
-//        }
-//    }
+   
     
-//    func setupLoadImage() {
-//
-//        guard let urlString = oneOfManyScreenShot, let url = URL(string: urlString) else { return }
-//
-//        DispatchQueue.global().async {
-//            guard let data = try? Data(contentsOf: url) else { return }
-//
-//            guard urlString == url.absoluteString else { return }
-//            DispatchQueue.main.async {
-//                for screenShot in self.screenShotsCollection {
-//                    screenShot.image = UIImage(data: data)
-//                }
-//            }
-//        }
-//    }
+    func setupScreenShot() {
+        let urlCount = appStores?.screenshotUrls?.count
+        var screenShotUrl: [String] = (appStores?.screenshotUrls)!
+        
+        for i in 0..<urlCount! {
+            
+            var oneOfManyScreenshotUrl: String? {
+                didSet {
+                    loadScreenImage()
+                }
+            }
+            
+            func loadScreenImage() {
+                guard let urlString = oneOfManyScreenshotUrl, let url = URL(string: urlString) else { return }
+                
+            }
+            
+            
+            
+            
+            
+            oneOfManyScreenshotUrl = screenShotUrl[i]
+        }
+        
+        
+        
+    }
+    
 }
