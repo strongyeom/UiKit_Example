@@ -893,10 +893,10 @@
             </objects>
             <point key="canvasLocation" x="3675" y="-305"/>
         </scene>
-        <!--View Controller-->
+        <!--Full Screen Collection View Controller-->
         <scene sceneID="ybV-5l-VvF">
             <objects>
-                <viewController id="lvL-NW-PwZ" sceneMemberID="viewController">
+                <viewController id="lvL-NW-PwZ" customClass="CFullScreenCollectionViewController" customModule="example_iTunesAPI_part2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7V8-Fq-gjm">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
