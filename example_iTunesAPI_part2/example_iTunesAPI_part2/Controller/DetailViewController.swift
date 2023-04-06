@@ -100,9 +100,10 @@ class DetailViewController: UIViewController {
     // 이미지를 눌렀을때 터치 액션
     @objc func imageTapped() {
         print("이미지가 터치 되었습니다1.")
-        let viewController = self.storyboard?.instantiateViewController(withIdentifier: "FullScreenViewController") as! FullScreenViewController
+        let viewController = self.storyboard?.instantiateViewController(withIdentifier: "FullScreenImageViewController") as! FullScreenImageViewController
         viewController.modalPresentationStyle = .fullScreen
-        viewController.imageUrl = appStores?.screenshotUrls
+        viewController.fullScreenImageUrl = appStores?.screenshotUrls
+        
         self.present(viewController, animated: true)
     }
     
