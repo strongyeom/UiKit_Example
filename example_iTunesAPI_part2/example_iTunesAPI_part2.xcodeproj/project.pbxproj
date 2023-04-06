@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2623D8D129DEF72C00AF6244 /* FullScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2623D8D029DEF72C00AF6244 /* FullScreenViewController.swift */; };
-		2623D8D329DEF76300AF6244 /* FullScreenImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2623D8D229DEF76300AF6244 /* FullScreenImageCollectionViewCell.swift */; };
+		2623D8D529DF08B200AF6244 /* FullScreenImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2623D8D429DF08B200AF6244 /* FullScreenImageViewController.swift */; };
+		2623D8D729DF09B100AF6244 /* FullScreenImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2623D8D629DF09B100AF6244 /* FullScreenImageCollectionViewCell.swift */; };
 		26C8D11329DD11930034993B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C8D11229DD11930034993B /* DetailViewController.swift */; };
 		26F7AAB829D8089B00B1029C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F7AAB729D8089B00B1029C /* AppDelegate.swift */; };
 		26F7AABA29D8089B00B1029C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F7AAB929D8089B00B1029C /* SceneDelegate.swift */; };
@@ -22,8 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2623D8D029DEF72C00AF6244 /* FullScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenViewController.swift; sourceTree = "<group>"; };
-		2623D8D229DEF76300AF6244 /* FullScreenImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		2623D8D429DF08B200AF6244 /* FullScreenImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenImageViewController.swift; sourceTree = "<group>"; };
+		2623D8D629DF09B100AF6244 /* FullScreenImageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullScreenImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		26C8D11229DD11930034993B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		26F7AAB429D8089B00B1029C /* example_iTunesAPI_part2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = example_iTunesAPI_part2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26F7AAB729D8089B00B1029C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -94,7 +94,7 @@
 			children = (
 				26F7AABB29D8089B00B1029C /* ViewController.swift */,
 				26C8D11229DD11930034993B /* DetailViewController.swift */,
-				2623D8D029DEF72C00AF6244 /* FullScreenViewController.swift */,
+				2623D8D429DF08B200AF6244 /* FullScreenImageViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -112,7 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				26F7AACB29D81AE900B1029C /* CollectionViewCell.swift */,
-				2623D8D229DEF76300AF6244 /* FullScreenImageCollectionViewCell.swift */,
+				2623D8D629DF09B100AF6244 /* FullScreenImageCollectionViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -198,9 +198,9 @@
 			files = (
 				26F7AAD629D82CDA00B1029C /* NetWorkManager.swift in Sources */,
 				26F7AABC29D8089B00B1029C /* ViewController.swift in Sources */,
-				2623D8D329DEF76300AF6244 /* FullScreenImageCollectionViewCell.swift in Sources */,
+				2623D8D729DF09B100AF6244 /* FullScreenImageCollectionViewCell.swift in Sources */,
 				26F7AAB829D8089B00B1029C /* AppDelegate.swift in Sources */,
-				2623D8D129DEF72C00AF6244 /* FullScreenViewController.swift in Sources */,
+				2623D8D529DF08B200AF6244 /* FullScreenImageViewController.swift in Sources */,
 				26F7AAD829D82E2600B1029C /* AppStoreModel.swift in Sources */,
 				26F7AACC29D81AE900B1029C /* CollectionViewCell.swift in Sources */,
 				26F7AABA29D8089B00B1029C /* SceneDelegate.swift in Sources */,

@@ -9,6 +9,12 @@ import UIKit
 
 class FullScreenImageCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var fullScreenShot: UIImageView!
     
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        
+    }
     
 }
