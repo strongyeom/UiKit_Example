@@ -86,6 +86,14 @@ struct ITunes: Codable {
         switch primaryGenreName {
         case "Social Networking":
             return "#4"
+        case "Travel", "Games", "Utilities", "Education", "Entertainment","Reference", "Photo & Video", "Health & Fitness","Productivity","Lifestyle", "Medical", "Business", "Developer Tools", "Graphics & Design", "Music", "News", "Weather":
+            return "#1"
+        case "Navigation":
+            return "#3"
+        case "Sports":
+            return "#2"
+        case "Finance":
+            return "#5"
         default:
             break
         }

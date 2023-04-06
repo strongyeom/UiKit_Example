@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2623D8BF29DEB3B300AF6244 /* Ext+Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2623D8BE29DEB3B300AF6244 /* Ext+Localized.swift */; };
 		26C8D11329DD11930034993B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26C8D11229DD11930034993B /* DetailViewController.swift */; };
 		26F7AAB829D8089B00B1029C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F7AAB729D8089B00B1029C /* AppDelegate.swift */; };
 		26F7AABA29D8089B00B1029C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26F7AAB929D8089B00B1029C /* SceneDelegate.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2623D8BE29DEB3B300AF6244 /* Ext+Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ext+Localized.swift"; sourceTree = "<group>"; };
 		26C8D11229DD11930034993B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		26F7AAB429D8089B00B1029C /* example_iTunesAPI_part2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = example_iTunesAPI_part2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		26F7AAB729D8089B00B1029C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 			children = (
 				26F7AAB729D8089B00B1029C /* AppDelegate.swift */,
 				26F7AAB929D8089B00B1029C /* SceneDelegate.swift */,
+				2623D8BE29DEB3B300AF6244 /* Ext+Localized.swift */,
 				26F7AAD229D82C5F00B1029C /* Model */,
 				26F7AAD029D82C5800B1029C /* Controller */,
 				26F7AAD329D82C8C00B1029C /* Cell */,
@@ -191,6 +194,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				26F7AAD629D82CDA00B1029C /* NetWorkManager.swift in Sources */,
+				2623D8BF29DEB3B300AF6244 /* Ext+Localized.swift in Sources */,
 				26F7AABC29D8089B00B1029C /* ViewController.swift in Sources */,
 				26F7AAB829D8089B00B1029C /* AppDelegate.swift in Sources */,
 				26F7AAD829D82E2600B1029C /* AppStoreModel.swift in Sources */,

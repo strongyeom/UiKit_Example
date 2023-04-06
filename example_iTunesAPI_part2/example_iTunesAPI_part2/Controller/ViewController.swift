@@ -46,7 +46,7 @@ class ViewController: UIViewController {
         flowLayout.minimumLineSpacing = 20
         
         let collectionViewWidth = UIScreen.main.bounds.width
-        let collectionViewHeight = UIScreen.main.bounds.height * 0.5
+        let collectionViewHeight = UIScreen.main.bounds.height * 0.4
         
         flowLayout.itemSize = CGSize(width: collectionViewWidth, height: collectionViewHeight)
         collectionView.collectionViewLayout = flowLayout
@@ -85,8 +85,8 @@ extension ViewController : UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! CollectionViewCell
         
         cell.imageIconUrl = appStores[indexPath.item].artworkUrl60
-        cell.mainLabel.text = appStores[indexPath.item].trackName
-        cell.subLabel.text = appStores[indexPath.item].description
+        cell.mainLabel.text = appStores[indexPath.item].trackName!.localized()
+        cell.subLabel.text = appStores[indexPath.item].description!.localized()
         cell.reviewLabel.text = appStores[indexPath.item].averageRating
         
         let screenShots = appStores[indexPath.item].screenshotUrls

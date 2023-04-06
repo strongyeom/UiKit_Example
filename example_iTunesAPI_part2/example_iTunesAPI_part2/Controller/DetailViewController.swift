@@ -8,27 +8,36 @@
 import UIKit
 
 class DetailViewController: UIViewController {
-    
+    // 앱 아이콘 및 앱 이름 설명 부분
     @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var AppLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
-    
+    // 평가 부분
     @IBOutlet weak var reviewCountLabel: UILabel!
     @IBOutlet weak var reviewAverage: UILabel!
     @IBOutlet weak var starReview: UILabel!
-    
+    // 사용 가능 부분
     @IBOutlet weak var useAge: UILabel!
-    
+    //차트 부분
     @IBOutlet weak var chart: UILabel!
     @IBOutlet weak var chartList: UILabel!
-    
+    // 개발자 부분
     @IBOutlet weak var artistPicture: UIImageView!
     @IBOutlet weak var artisName: UILabel!
-    
+    // 언어 부분
     @IBOutlet weak var languageCode: UILabel!
     @IBOutlet weak var languageCount: UILabel!
-  
-    @IBOutlet var screenShotsCollection: [UIImageView]!
+    // 스크린 샷 부분
+    @IBOutlet var screenShotCollection: [UIImageView]!
+    // 앱 상세 설명 부분
+    @IBOutlet weak var detailDescription: UILabel!
+    // 더보기
+    @IBOutlet weak var tabButtonClickedMore: UIButton!
+    // 개발자
+    @IBOutlet weak var detailArtist: UILabel!
+    // 평균 평점
+    @IBOutlet weak var detailReviewAverage: UILabel!
+    @IBOutlet weak var detailDescriptionHeight: NSLayoutConstraint!
     
     var appStores: ITunes?
     
@@ -53,14 +62,13 @@ class DetailViewController: UIViewController {
             }
         }
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print("DetailViewController - \(String(describing: appStores))")
         iconImageView.layer.cornerRadius = 12
         setupDetailView()
-        setupScreenShot()
-        
+        setupDetailImage()
         
     }
     
@@ -79,36 +87,51 @@ class DetailViewController: UIViewController {
         artisName.text = appStores?.artistName
         languageCode.text = appStores?.languageCodesISO2A![0]
         languageCount.text = appStores?.languageCount
+        detailDescription.text = appStores?.description
+        detailArtist.text = appStores?.artistName
+        detailArtist.textColor = UIColor.link
+        detailReviewAverage.text = appStores?.averageRatingCount
+        
     }
     
-   
-    
-    func setupScreenShot() {
-        let urlCount = appStores?.screenshotUrls?.count
-        var screenShotUrl: [String] = (appStores?.screenshotUrls)!
+    func setupDetailImage() {
+        var a1: [URL] = []
         
-        for i in 0..<urlCount! {
+        guard let screenshotUrls = appStores?.screenshotUrls else { return }
+        
+        for i in screenshotUrls {
             
-            var oneOfManyScreenshotUrl: String? {
-                didSet {
-                    loadScreenImage()
-                }
-            }
-            
-            func loadScreenImage() {
-                guard let urlString = oneOfManyScreenshotUrl, let url = URL(string: urlString) else { return }
-                
-            }
-            
-            
-            
-            
-            
-            oneOfManyScreenshotUrl = screenShotUrl[i]
+            a1.append(URL(string: i)!)
         }
-        
-        
-        
+        // a1에 appStores?.screenshotUrls에서 받아온 url이 쌓임 ex) 8개, 6개, 5개 ...
+        // 근데 이미지뷰가 해당 url보다 작거나 많으면 인덱스 초과 미만 뜸 --> 고정으로 7개만 보여주자
+        // url 배열 만들어짐
+        print("URL 배열 \(a1)")
+        print("URL의 갯수 : \(a1.count)")
+        print("스샷콜렉션 갯수: \(screenShotCollection.count)")
+        for j in 0..<a1.count {
+            if j <= screenShotCollection.count-1  {
+                DispatchQueue.global().async {
+                    guard let data = try? Data(contentsOf: a1[j]) else { return }
+                    DispatchQueue.main.async {
+                        self.screenShotCollection[j].image = UIImage(data: data)
+                        self.screenShotCollection[j].layer.cornerRadius = 8
+                    }
+                }
+            } else {
+                break
+            }
+        }
     }
+    
+    @IBAction func tabButtonClicked(_ sender: UIButton) {
+        
+        self.detailDescriptionHeight.priority = .defaultHigh
+        self.detailDescription.numberOfLines = 0
+        self.detailDescriptionHeight.constant = 400
+        self.view.layoutIfNeeded()
+    }
+    
     
 }
+

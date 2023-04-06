@@ -1,15 +1,108 @@
 
+/* Class = "UILabel"; text = "Label"; ObjectID = "1wV-xI-YnB"; */
+"1wV-xI-YnB.text" = "한국어입니다.";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "51T-dA-oeB"; */
+"51T-dA-oeB.text" = "한국어입니다.";
+
+/* Class = "UILabel"; text = "이 앱 너무 좋아요"; ObjectID = "Ahv-3W-EDY"; */
+"Ahv-3W-EDY.text" = "이 앱 너무 좋아요";
+
+/* Class = "UILabel"; text = "별점"; ObjectID = "Awy-m8-Ibs"; */
+"Awy-m8-Ibs.text" = "별점";
+
+/* Class = "UILabel"; text = "개발자이름"; ObjectID = "Bpr-W7-TAB"; */
+"Bpr-W7-TAB.text" = "개발자이름";
+
+/* Class = "UILabel"; text = "세"; ObjectID = "DnO-L8-QL0"; */
+"DnO-L8-QL0.text" = "세";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "H12-eb-R8s"; */
+"H12-eb-R8s.text" = "한국어입니다.";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "H9V-6j-ddy"; */
+"H9V-6j-ddy.text" = "한국어입니다.";
+
+/* Class = "UILabel"; text = "이 앱 너무 좋아요"; ObjectID = "HVp-40-t7B"; */
+"HVp-40-t7B.text" = "이 앱 너무 좋아요";
+
+/* Class = "UILabel"; text = "Description"; ObjectID = "HWL-BC-0WV"; */
+"HWL-BC-0WV.text" = "한국어입니다.";
+
+/* Class = "UILabel"; text = "카카오페이지 너무 좋고 디자인도 사용자 친화적입니다"; ObjectID = "HXG-67-oVK"; */
+"HXG-67-oVK.text" = "카카오페이지 너무 좋고 디자인도 사용자 친화적입니다";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "K7x-5k-P7E"; */
+"K7x-5k-P7E.text" = "한국어입니다.";
+
 /* Class = "UILabel"; text = "Label"; ObjectID = "OmW-lg-wnM"; */
-"OmW-lg-wnM.text" = "Label";
+"OmW-lg-wnM.text" = "한국어입니다.";
+
+/* Class = "UILabel"; text = "개발자"; ObjectID = "RbN-1W-SbX"; */
+"RbN-1W-SbX.text" = "개발자";
 
 /* Class = "UINavigationItem"; title = "검색"; ObjectID = "SKM-6x-JYi"; */
 "SKM-6x-JYi.title" = "검색";
 
+/* Class = "UILabel"; text = "차트"; ObjectID = "T1Q-Pr-sCD"; */
+"T1Q-Pr-sCD.text" = "차트";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Wu2-G4-SYE"; */
+"Wu2-G4-SYE.text" = "한국어입니다.";
+
+/* Class = "UILabel"; text = "연령"; ObjectID = "YAH-MR-bzs"; */
+"YAH-MR-bzs.text" = "연령";
+
+/* Class = "UIButton"; normalTitle = "더 보기"; ObjectID = "Yxw-mf-0RU"; */
+"Yxw-mf-0RU.normalTitle" = "더 보기";
+
+/* Class = "UILabel"; text = "언어"; ObjectID = "ZLd-FX-36m"; */
+"ZLd-FX-36m.text" = "언어";
+
+/* Class = "UIButton"; normalTitle = "모두 보기"; ObjectID = "ais-Vb-MQD"; */
+"ais-Vb-MQD.normalTitle" = "모두 보기";
+
+/* Class = "UILabel"; text = "평가"; ObjectID = "bgz-gU-diJ"; */
+"bgz-gU-diJ.text" = "평가";
+
 /* Class = "UILabel"; text = "Label"; ObjectID = "d4s-sw-6sV"; */
-"d4s-sw-6sV.text" = "Label";
+"d4s-sw-6sV.text" = "한국어입니다.";
+
+/* Class = "UILabel"; text = "평가 및 리뷰"; ObjectID = "e7H-4e-uTG"; */
+"e7H-4e-uTG.text" = "평가 및 리뷰";
+
+/* Class = "UILabel"; text = "앱 내 구입"; ObjectID = "iYN-wO-Qgj"; */
+"iYN-wO-Qgj.text" = "앱 내 구입";
+
+/* Class = "UILabel"; text = "카카오페이지 너무 좋고 디자인도 사용자 친화적입니다"; ObjectID = "iZ8-Pd-Fn6"; */
+"iZ8-Pd-Fn6.text" = "카카오페이지 너무 좋고 디자인도 사용자 친화적입니다";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "jVt-a4-och"; */
+"jVt-a4-och.text" = "한국어입니다.";
+
+/* Class = "UILabel"; text = "이 앱 너무 좋아요"; ObjectID = "l6H-87-eRb"; */
+"l6H-87-eRb.text" = "이 앱 너무 좋아요";
 
 /* Class = "UIButton"; normalTitle = "받기"; ObjectID = "mQz-0o-bqY"; */
 "mQz-0o-bqY.normalTitle" = "받기";
 
+/* Class = "UILabel"; text = "액션"; ObjectID = "nSm-k0-nVX"; */
+"nSm-k0-nVX.text" = "액션";
+
+/* Class = "UILabel"; text = "카카오페이지 너무 좋고 디자인도 사용자 친화적입니다"; ObjectID = "niO-d9-Kxh"; */
+"niO-d9-Kxh.text" = "카카오페이지 너무 좋고 디자인도 사용자 친화적입니다";
+
 /* Class = "UILabel"; text = "Label"; ObjectID = "qQE-4t-9TD"; */
-"qQE-4t-9TD.text" = "Label";
+"qQE-4t-9TD.text" = "한국어입니다.";
+
+/* Class = "UILabel"; text = "탭 하여 평가하기"; ObjectID = "tji-89-52d"; */
+"tji-89-52d.text" = "탭 하여 평가하기";
+
+/* Class = "UILabel"; text = "artistName"; ObjectID = "uQo-7E-O3N"; */
+"uQo-7E-O3N.text" = "한국어입니다.";
+
+/* Class = "UIButton"; normalTitle = "받기"; ObjectID = "w9E-6t-ePi"; */
+"w9E-6t-ePi.normalTitle" = "받기";
+
+/* Class = "UILabel"; text = "별 갯수"; ObjectID = "yI9-9b-hx6"; */
+"yI9-9b-hx6.text" = "별 갯수";

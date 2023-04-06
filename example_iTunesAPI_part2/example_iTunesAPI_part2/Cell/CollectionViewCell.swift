@@ -67,7 +67,7 @@ class CollectionViewCell: UICollectionViewCell {
             
             DispatchQueue.main.async {
                 self.iconImage.image = UIImage(data: data)
-            }
+            } 
         }
     }
     
