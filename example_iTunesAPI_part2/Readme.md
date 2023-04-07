@@ -20,7 +20,7 @@ API통신과 레이아웃을 이해하며, 애플의 HIG를 보며 심미성과 
 ***
 ### 주요 화면
 <p align="leading">
-  <img src ="https://user-images.githubusercontent.com/101084872/230623617-36e05004-e066-485f-adc2-a2612ff5213d.gif" width="20%" height="35%"> | <image src= "" width="20%" height="35%">
+  <img src ="https://user-images.githubusercontent.com/101084872/230623617-36e05004-e066-485f-adc2-a2612ff5213d.gif" width="20%" height="35%">  <image src= "https://user-images.githubusercontent.com/101084872/230624404-936446a8-e055-43b3-a301-6b1d98f3da04.gif" width="20%" height="35%">
   </p>
 
 ### 개발환경
