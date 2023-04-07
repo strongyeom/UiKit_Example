@@ -11,11 +11,14 @@ API통신과 레이아웃을 이해하며, 애플의 HIG를 보며 심미성과 
 2. AutoLayout 설정
 
 ***
-### 클론하며 습득한 기술
+### 활용 기술 
 1. CollectionView 
 2. StoryBoard Layout
 3. Network
 
 ***
-### 주요 기능
+### 주요 화면
+gif로 구성 
+
+### 개발환경
 
