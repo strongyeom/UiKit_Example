@@ -24,3 +24,9 @@ API통신과 레이아웃을 이해하며, 애플의 HIG를 보며 심미성과 
 
 ### 개발환경
 
+ <img src="https://img.shields.io/badge/iOS-000000?style=flat&logo=Apple&logoColor=white"/> 
+
+***
+ [**Language & Tools**]
+
+ <img src="https://img.shields.io/badge/Swift-dd2c00?style=flat&logo=swift&logoColor=white"/> <img src="https://img.shields.io/badge/Xcode-00b0ff?style=flat&logo=Xcode&logoColor=white"/>
