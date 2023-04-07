@@ -108,12 +108,14 @@ class DetailViewController: UIViewController {
     }
     
     func setupDetailImage() {
+        // URL(string: )으로 변환된 것을 담기 위한 빈 배열 생성
         var a1: [URL] = []
         
+        // 옵셔널로 오기때문에 바인딩
         guard let screenshotUrls = appStores?.screenshotUrls else { return }
         
         for i in screenshotUrls {
-            
+            // 바인딩된 String -> URL(string: ) 으로 변환후 빈 배열에 담기
             a1.append(URL(string: i)!)
         }
         // a1에 appStores?.screenshotUrls에서 받아온 url이 쌓임 ex) 8개, 6개, 5개 ...
@@ -123,11 +125,14 @@ class DetailViewController: UIViewController {
         print("URL의 갯수 : \(a1.count)")
         print("스샷콜렉션 갯수: \(screenShotCollection.count)")
         for j in 0..<a1.count {
-            if j <= screenShotCollection.count-1  {
+            if j <= screenShotCollection.count-1 {
                 DispatchQueue.global().async {
+                    // 변환된 a1을 하나씩 넣어주며 data를 생성한다.
                     guard let data = try? Data(contentsOf: a1[j]) else { return }
+                    
                     DispatchQueue.main.async {
                         self.screenShotCollection[j].image = UIImage(data: data)
+                        // 각 ImageView에 cornerRadius 적용
                         self.screenShotCollection[j].layer.cornerRadius = 8
                         // 스토리보드에서 userInteractionEnalbed 체크해주고 true로 설정
                         self.screenShotCollection[j].isUserInteractionEnabled = true
@@ -136,6 +141,7 @@ class DetailViewController: UIViewController {
                     }
                 }
             } else {
+                // 배열의 갯수가 넘어간다면 Stop
                 break
             }
         }

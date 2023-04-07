@@ -18,40 +18,29 @@ class CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var screenShot1: UIImageView!
     @IBOutlet weak var screenShot2: UIImageView!
     @IBOutlet weak var screenShot3: UIImageView!
-    
+    // imageIcon
     var imageIconUrl: String? {
         didSet {
             loadImage()
         }
     }
-    
+    // screenShot1
     var firstScreenShotUrl: String? {
         didSet {
             firstScreenShotLoadImage()
         }
     }
-    
+    // screenShot2
     var secondScreenShotUrl: String? {
         didSet {
             secondScreenShotLoadImage()
         }
     }
-    
+    // screenShot3
     var thirdScreenShotUrl: String? {
         didSet {
             thirdScreenShotLoadImage()
         }
-    }
-    
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        iconImage.layer.cornerRadius = 8
-        screenShot1.layer.cornerRadius = 8
-        screenShot2.layer.cornerRadius = 8
-        screenShot3.layer.cornerRadius = 8
-        
-        downLoadButton.layer.cornerRadius = 12
     }
     
     /// IconImage 세팅하는 메서드
@@ -66,8 +55,9 @@ class CollectionViewCell: UICollectionViewCell {
             guard urlString == url.absoluteString else { return }
             
             DispatchQueue.main.async {
+                // screenShot1, screenShot2, screenShot3
                 self.iconImage.image = UIImage(data: data)
-            } 
+            }
         }
     }
     
@@ -121,6 +111,18 @@ class CollectionViewCell: UICollectionViewCell {
     }
     
     
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        iconImage.layer.cornerRadius = 8
+        screenShot1.layer.cornerRadius = 8
+        screenShot2.layer.cornerRadius = 8
+        screenShot3.layer.cornerRadius = 8
+        
+        downLoadButton.layer.cornerRadius = 12
+    }
+    
+
     
     
     

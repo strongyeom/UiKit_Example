@@ -17,6 +17,9 @@ class FullScreenImageViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     
     let flowLayout = UICollectionViewFlowLayout()
+    
+   
+
     // 전 화면에서 ScreenShotUrl 배열 받아오기
     var fullScreenImageUrl: [String]?
     
@@ -31,7 +34,7 @@ class FullScreenImageViewController: UIViewController {
         
         flowLayout.minimumInteritemSpacing = 20
         flowLayout.scrollDirection = .horizontal
-        
+        flowLayout.scrollDirection = .horizontal
         
         let collectionViewWidth = UIScreen.main.bounds.width
         let collectionViewHeight = UIScreen.main.bounds.height * 0.8
@@ -65,3 +68,4 @@ extension FullScreenImageViewController: UICollectionViewDataSource {
         return cell
     }
 }
+
