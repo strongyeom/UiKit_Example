@@ -31,11 +31,9 @@ class FullScreenImageViewController: UIViewController {
     
     func setupCollectionView() {
         collectionView.dataSource = self
-        
         flowLayout.minimumInteritemSpacing = 20
         flowLayout.scrollDirection = .horizontal
-        flowLayout.scrollDirection = .horizontal
-        
+        collectionView.isPagingEnabled = true
         let collectionViewWidth = UIScreen.main.bounds.width
         let collectionViewHeight = UIScreen.main.bounds.height * 0.8
         flowLayout.itemSize = CGSize(width: collectionViewWidth, height: collectionViewHeight)
@@ -68,4 +66,3 @@ extension FullScreenImageViewController: UICollectionViewDataSource {
         return cell
     }
 }
-

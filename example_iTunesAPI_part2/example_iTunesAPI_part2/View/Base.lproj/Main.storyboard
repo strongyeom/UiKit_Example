@@ -911,7 +911,7 @@
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="t7n-Xp-AKS">
-                                <rect key="frame" x="10" y="129" width="373" height="669"/>
+                                <rect key="frame" x="0.0" y="129" width="393" height="669"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="lj4-pr-erm">
                                     <size key="itemSize" width="373" height="265"/>
@@ -921,7 +921,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FullScreenImageCollectionViewCell" id="Anz-Do-5NK" customClass="FullScreenImageCollectionViewCell" customModule="example_iTunesAPI_part2" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="373" height="265"/>
+                                        <rect key="frame" x="10" y="0.0" width="373" height="265"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="8l9-ho-yNL">
                                             <rect key="frame" x="0.0" y="0.0" width="373" height="265"/>
@@ -951,9 +951,9 @@
                         <constraints>
                             <constraint firstItem="yd7-EX-aBU" firstAttribute="bottom" secondItem="t7n-Xp-AKS" secondAttribute="bottom" constant="20" id="Acw-2Z-a8P"/>
                             <constraint firstItem="t7n-Xp-AKS" firstAttribute="top" secondItem="V6C-sh-4B5" secondAttribute="bottom" constant="20" id="LhW-Ch-F6S"/>
-                            <constraint firstItem="yd7-EX-aBU" firstAttribute="trailing" secondItem="t7n-Xp-AKS" secondAttribute="trailing" constant="10" id="Ton-gG-Gre"/>
+                            <constraint firstItem="yd7-EX-aBU" firstAttribute="trailing" secondItem="t7n-Xp-AKS" secondAttribute="trailing" id="Ton-gG-Gre"/>
                             <constraint firstItem="yd7-EX-aBU" firstAttribute="trailing" secondItem="V6C-sh-4B5" secondAttribute="trailing" constant="20" id="YK2-3o-KS1"/>
-                            <constraint firstItem="t7n-Xp-AKS" firstAttribute="leading" secondItem="yd7-EX-aBU" secondAttribute="leading" constant="10" id="fcN-D5-Kym"/>
+                            <constraint firstItem="t7n-Xp-AKS" firstAttribute="leading" secondItem="yd7-EX-aBU" secondAttribute="leading" id="fcN-D5-Kym"/>
                             <constraint firstItem="V6C-sh-4B5" firstAttribute="top" secondItem="yd7-EX-aBU" secondAttribute="top" constant="20" id="ff6-g9-rOS"/>
                             <constraint firstItem="V6C-sh-4B5" firstAttribute="leading" relation="lessThanOrEqual" secondItem="yd7-EX-aBU" secondAttribute="leading" constant="278" id="ogn-EE-nsv"/>
                         </constraints>
