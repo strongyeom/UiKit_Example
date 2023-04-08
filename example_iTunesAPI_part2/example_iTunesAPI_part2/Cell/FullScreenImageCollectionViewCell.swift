@@ -21,7 +21,7 @@ class FullScreenImageCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         fullScreenShot.contentMode = .scaleAspectFit
-        
+        fullScreenShot.backgroundColor = .red
     }
     
     func fullLoadImage() {
