@@ -53,6 +53,13 @@ class DetailViewController: UIViewController {
     func loadImage() {
         
         guard let urlString = imageIconUrl, let url = URL(string: urlString) else { return }
+        let cacheKey = NSString(string: urlString)
+        
+        if let cachedImage = ImageCacheManager.shared.object(forKey: cacheKey) {
+            print("DetailViewController - iconImage ⭐️ 해당 이미지가 캐시이미지에 저장되어 있음")
+            self.iconImageView.image = cachedImage
+            return
+        }
         
         DispatchQueue.global().async {
             
@@ -61,7 +68,13 @@ class DetailViewController: UIViewController {
             guard urlString == url.absoluteString else { return }
             
             DispatchQueue.main.async {
-                self.iconImageView.image = UIImage(data: data)
+                guard let image = UIImage(data: data) else { return }
+                // 다운로드된 이미지를 캐시에 저장
+                print("DetailViewController - iconImage - ❗️캐시 이미지에 이미지가 없다면 다운로드된 이미지를 캐시에 저장")
+                ImageCacheManager.shared.setObject(image, forKey: cacheKey)
+                self.iconImageView.image = image
+                
+                
             }
         }
     }
@@ -113,10 +126,12 @@ class DetailViewController: UIViewController {
         
         // 옵셔널로 오기때문에 바인딩
         guard let screenshotUrls = appStores?.screenshotUrls else { return }
+       // var cacheKey: [NSString] = []
         
         for i in screenshotUrls {
             // 바인딩된 String -> URL(string: ) 으로 변환후 빈 배열에 담기
             a1.append(URL(string: i)!)
+            //cacheKey.append(NSString(string: i))
         }
         // a1에 appStores?.screenshotUrls에서 받아온 url이 쌓임 ex) 8개, 6개, 5개 ...
         // 근데 이미지뷰가 해당 url보다 작거나 많으면 인덱스 초과 미만 뜸 --> 고정으로 7개만 보여주자
@@ -126,11 +141,31 @@ class DetailViewController: UIViewController {
         print("스샷콜렉션 갯수: \(screenShotCollection.count)")
         for j in 0..<a1.count {
             if j <= screenShotCollection.count-1 {
+                
+//                let cacheKey = NSString(string: cacheKey[j])
+//                // 하나씩 돌리면서 이미지 캐시 만들기
+//                if let cachedImage = ImageCacheManager.shared.object(forKey: cacheKey) {
+//                    print("DetailViewController - setupDetailImage ⭐️ 해당 이미지가 캐시이미지에 저장되어 있음")
+//                    self.screenShotCollection[j].image = cachedImage
+//                }
+                
+                
+                
                 DispatchQueue.global().async {
                     // 변환된 a1을 하나씩 넣어주며 data를 생성한다.
+                    
                     guard let data = try? Data(contentsOf: a1[j]) else { return }
                     
                     DispatchQueue.main.async {
+                        
+//                        guard let image = UIImage(data: data) else { return }
+//
+//                        print("DetailViewController - DispatchQueue.global ❗️캐시 이미지에 이미지가 없다면 다운로드된 이미지를 캐시에 저장 ")
+//
+//                        ImageCacheManager.shared.setObject(image, forKey: cacheKey)
+//
+//                        self.screenShotCollection[j].image = image
+                        
                         self.screenShotCollection[j].image = UIImage(data: data)
                         // 각 ImageView에 cornerRadius 적용
                         self.screenShotCollection[j].layer.cornerRadius = 8

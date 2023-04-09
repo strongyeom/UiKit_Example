@@ -47,6 +47,14 @@ class CollectionViewCell: UICollectionViewCell {
     func loadImage() {
         
         guard let urlString = imageIconUrl, let url = URL(string: urlString) else { return }
+        let cacheKey = NSString(string: urlString) // 캐시에 사용될 key 값
+        
+        // 해당 key에 캐시 이미지가 저장되어 있으면 이미지를 사용
+        if let cachedImage = ImageCacheManager.shared.object(forKey: cacheKey) {
+            print("imageIconUrl - ⭐️ 해당 이미지가 캐시이미지에 저장되어 있음")
+            self.iconImage.image = cachedImage
+            return
+        }
         
         DispatchQueue.global().async {
             
@@ -55,8 +63,11 @@ class CollectionViewCell: UICollectionViewCell {
             guard urlString == url.absoluteString else { return }
             
             DispatchQueue.main.async {
-                // screenShot1, screenShot2, screenShot3
-                self.iconImage.image = UIImage(data: data)
+                guard let image = UIImage(data: data) else { return }
+                // 다운로드된 이미지를 캐시에 저장
+                print("imageIconUrl - ❗️캐시 이미지에 이미지가 없다면 다운로드된 이미지를 캐시에 저장")
+                ImageCacheManager.shared.setObject(image, forKey: cacheKey)
+                self.iconImage.image = image
             }
         }
     }
@@ -65,6 +76,14 @@ class CollectionViewCell: UICollectionViewCell {
     func firstScreenShotLoadImage() {
         
         guard let urlString = firstScreenShotUrl, let url = URL(string: urlString) else { return }
+        let cacheKey = NSString(string: urlString) // 캐시에 사용될 key 값
+        
+        // 해당 key에 캐시 이미지가 저장되어 있으면 이미지를 사용
+        if let cachedImage = ImageCacheManager.shared.object(forKey: cacheKey) {
+            print("firstScreenShotLoadImage - ⭐️ 해당 이미지가 캐시이미지에 저장되어 있음")
+            self.screenShot1.image = cachedImage
+            return
+        }
         
         DispatchQueue.global().async {
             
@@ -73,7 +92,10 @@ class CollectionViewCell: UICollectionViewCell {
             guard urlString == url.absoluteString else { return }
             
             DispatchQueue.main.async {
-                self.screenShot1.image = UIImage(data: data)
+                print("firstScreenShotLoadImage - ❗️캐시 이미지에 이미지가 없다면 다운로드된 이미지를 캐시에 저장")
+                guard let image = UIImage(data: data) else { return }
+                ImageCacheManager.shared.setObject(image, forKey: cacheKey)
+                self.screenShot1.image = image
             }
         }
     }
@@ -82,6 +104,13 @@ class CollectionViewCell: UICollectionViewCell {
         
         guard let urlString = secondScreenShotUrl, let url = URL(string: urlString) else { return }
         
+        let cacheKey = NSString(string: urlString)
+        
+        if let cacheImage =  ImageCacheManager.shared.object(forKey: cacheKey) {
+            print("secondScreenShotLoadImage - ⭐️ 해당 이미지가 캐시이미지에 저장되어 있음")
+            self.screenShot2.image = cacheImage
+            return
+        }
         DispatchQueue.global().async {
             
             guard let data = try? Data(contentsOf: url) else { return }
@@ -89,7 +118,11 @@ class CollectionViewCell: UICollectionViewCell {
             guard urlString == url.absoluteString else { return }
             
             DispatchQueue.main.async {
-                self.screenShot2.image = UIImage(data: data)
+                
+                guard let image = UIImage(data: data) else { return }
+                print("secondScreenShotLoadImage - ❗️캐시 이미지에 이미지가 없다면 다운로드된 이미지를 캐시에 저장")
+                ImageCacheManager.shared.setObject(image, forKey: cacheKey)
+                self.screenShot2.image = image
             }
         }
     }
@@ -98,6 +131,12 @@ class CollectionViewCell: UICollectionViewCell {
         
         guard let urlString = thirdScreenShotUrl, let url = URL(string: urlString) else { return }
         
+        let cacheKey = NSString(string: urlString)
+        if let cachedImage = ImageCacheManager.shared.object(forKey: cacheKey) {
+            print("thirdScreenShotLoadImage - ⭐️ 해당 이미지가 캐시이미지에 저장되어 있음")
+            self.screenShot3.image = cachedImage
+            return
+        }
         DispatchQueue.global().async {
             
             guard let data = try? Data(contentsOf: url) else { return }
@@ -105,7 +144,10 @@ class CollectionViewCell: UICollectionViewCell {
             guard urlString == url.absoluteString else { return }
             
             DispatchQueue.main.async {
-                self.screenShot3.image = UIImage(data: data)
+                guard let image = UIImage(data: data) else { return }
+                ImageCacheManager.shared.setObject(image, forKey: cacheKey)
+                print("thirdScreenShotLoadImage - ❗️캐시 이미지에 이미지가 없다면 다운로드된 이미지를 캐시에 저장")
+                self.screenShot3.image = image
             }
         }
     }

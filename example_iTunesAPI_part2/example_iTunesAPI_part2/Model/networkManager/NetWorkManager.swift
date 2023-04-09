@@ -19,6 +19,7 @@ final class NetworkManager {
     
     func fetchRequest(term: String, completion: @escaping([ITunes]?) -> Void) {
         
+        
         let urlString = "\(iTunesUrl)&term=\(term)"
         print(urlString)
         

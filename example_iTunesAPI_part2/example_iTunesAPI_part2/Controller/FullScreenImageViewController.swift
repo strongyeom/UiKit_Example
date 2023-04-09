@@ -62,7 +62,6 @@ extension FullScreenImageViewController: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: FullScreenImageCollectionViewCell.self), for: indexPath) as! FullScreenImageCollectionViewCell
         for i in 0..<fullScreenImageUrl!.count {
             cell.fullImageUrl = fullScreenImageUrl![i]
-//            cell.fullScreenShot.layer.cornerRadius = 100
         }
         
        
