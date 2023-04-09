@@ -12,7 +12,7 @@ import UIKit
 // Todo - 풀 스크린 프레임 간격 조정 
 
 
-class FullScreenImageViewController: UIViewController, UICollectionViewDelegateFlowLayout {
+class FullScreenImageViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -43,6 +43,7 @@ class FullScreenImageViewController: UIViewController, UICollectionViewDelegateF
     }
     
     @IBAction func tabButtonClicked(_ sender: UIButton) {
+        print("FullScreenImageViewController 화면이 내려갑니다.")
         dismiss(animated: true)
     }
 
@@ -61,11 +62,10 @@ extension FullScreenImageViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: FullScreenImageCollectionViewCell.self), for: indexPath) as! FullScreenImageCollectionViewCell
         for i in 0..<fullScreenImageUrl!.count {
+            print("FullScreen - 하나씩 넘겨줌")
             cell.fullImageUrl = fullScreenImageUrl![i]
+            
         }
-        
-       
-        
         return cell
     }
 }

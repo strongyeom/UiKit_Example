@@ -86,6 +86,8 @@ class DetailViewController: UIViewController {
         setupDetailView()
         setupDetailImage()
         downLoadButton.layer.cornerRadius = 12
+        setupImageSettingOPtion()
+        
     }
     
     func setupDetailView() {
@@ -112,7 +114,7 @@ class DetailViewController: UIViewController {
     
     // 이미지를 눌렀을때 터치 액션
     @objc func imageTapped() {
-        print("이미지가 터치 되었습니다1.")
+        print("이미지가 터치 되었습니다.")
         let viewController = self.storyboard?.instantiateViewController(withIdentifier: "FullScreenImageViewController") as! FullScreenImageViewController
         viewController.modalPresentationStyle = .fullScreen
         viewController.fullScreenImageUrl = appStores?.screenshotUrls
@@ -142,12 +144,13 @@ class DetailViewController: UIViewController {
         for j in 0..<a1.count {
             if j <= screenShotCollection.count-1 {
                 
-//                let cacheKey = NSString(string: cacheKey[j])
-//                // 하나씩 돌리면서 이미지 캐시 만들기
-//                if let cachedImage = ImageCacheManager.shared.object(forKey: cacheKey) {
-//                    print("DetailViewController - setupDetailImage ⭐️ 해당 이미지가 캐시이미지에 저장되어 있음")
-//                    self.screenShotCollection[j].image = cachedImage
-//                }
+                let cacheKey = NSString(string: screenshotUrls[j])
+                // 하나씩 돌리면서 이미지 캐시 만들기
+                if let cachedImage = ImageCacheManager.shared.object(forKey: cacheKey) {
+                    print("DetailViewController - setupDetailImage ⭐️ 해당 이미지가 캐시이미지에 저장되어 있음")
+                    self.screenShotCollection[j].image = cachedImage
+                    continue
+                }
                 
                 
                 
@@ -158,21 +161,14 @@ class DetailViewController: UIViewController {
                     
                     DispatchQueue.main.async {
                         
-//                        guard let image = UIImage(data: data) else { return }
-//
-//                        print("DetailViewController - DispatchQueue.global ❗️캐시 이미지에 이미지가 없다면 다운로드된 이미지를 캐시에 저장 ")
-//
-//                        ImageCacheManager.shared.setObject(image, forKey: cacheKey)
-//
-//                        self.screenShotCollection[j].image = image
-                        
-                        self.screenShotCollection[j].image = UIImage(data: data)
-                        // 각 ImageView에 cornerRadius 적용
-                        self.screenShotCollection[j].layer.cornerRadius = 8
-                        // 스토리보드에서 userInteractionEnalbed 체크해주고 true로 설정
-                        self.screenShotCollection[j].isUserInteractionEnabled = true
-                        // 이미지를 탭 제스처를 했을때 실행할 메서드
-                        self.screenShotCollection[j].addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.imageTapped)))
+                        guard let image = UIImage(data: data) else { return }
+
+                        print("DetailViewController - DispatchQueue.global ❗️캐시 이미지에 이미지가 없다면 다운로드된 이미지를 캐시에 저장 ")
+
+                        ImageCacheManager.shared.setObject(image, forKey: cacheKey)
+
+                        self.screenShotCollection[j].image = image
+                     
                     }
                 }
             } else {
@@ -180,6 +176,21 @@ class DetailViewController: UIViewController {
                 break
             }
         }
+    }
+    
+    // main큐에서 작동하지 않아서 따로 함수를 만들어줌...
+    // 원인은 152번째 continue로 추정..
+    func setupImageSettingOPtion() {
+        
+        for index in 0..<screenShotCollection.count {
+            // 각 ImageView에 cornerRadius 적용
+            self.screenShotCollection[index].layer.cornerRadius = 12
+            // 스토리보드에서 userInteractionEnalbed 체크해주고 true로 설정
+            self.screenShotCollection[index].isUserInteractionEnabled = true
+            // 이미지를 탭 제스처를 했을때 실행할 메서드
+            self.screenShotCollection[index].addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.imageTapped)))
+        }
+       
     }
 
     /// 더보기 버튼을 눌렀을때 description창 늘어남
