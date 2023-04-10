@@ -128,12 +128,10 @@ class DetailViewController: UIViewController {
         
         // 옵셔널로 오기때문에 바인딩
         guard let screenshotUrls = appStores?.screenshotUrls else { return }
-       // var cacheKey: [NSString] = []
         
         for i in screenshotUrls {
             // 바인딩된 String -> URL(string: ) 으로 변환후 빈 배열에 담기
             a1.append(URL(string: i)!)
-            //cacheKey.append(NSString(string: i))
         }
         // a1에 appStores?.screenshotUrls에서 받아온 url이 쌓임 ex) 8개, 6개, 5개 ...
         // 근데 이미지뷰가 해당 url보다 작거나 많으면 인덱스 초과 미만 뜸 --> 고정으로 7개만 보여주자
@@ -142,6 +140,8 @@ class DetailViewController: UIViewController {
         print("URL의 갯수 : \(a1.count)")
         print("스샷콜렉션 갯수: \(screenShotCollection.count)")
         for j in 0..<a1.count {
+            // a1[j]의 갯수 <= imageView의 갯수 가 될때만 실행하기
+            // 왜냐하면 imageView의 갯수보다 URL의 갯수가 많으면 index 에러 발생
             if j <= screenShotCollection.count-1 {
                 
                 let cacheKey = NSString(string: screenshotUrls[j])

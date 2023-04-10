@@ -77,11 +77,8 @@
                                                                             </constraints>
                                                                         </stackView>
                                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mQz-0o-bqY">
-                                                                            <rect key="frame" x="250" y="17" width="34" height="26"/>
+                                                                            <rect key="frame" x="250" y="15.666666666666668" width="34" height="29.000000000000004"/>
                                                                             <color key="backgroundColor" systemColor="systemGray5Color"/>
-                                                                            <constraints>
-                                                                                <constraint firstAttribute="height" constant="26" id="Y1w-Jg-0Ga"/>
-                                                                            </constraints>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                                                             <state key="normal" title="받기"/>
@@ -896,7 +893,7 @@
         <!--Full Screen Image View Controller-->
         <scene sceneID="X76-iM-X6Z">
             <objects>
-                <viewController storyboardIdentifier="FullScreenImageViewController" id="n9T-Ug-9Da" customClass="FullScreenImageViewController" customModule="example_iTunesAPI_part2" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FullScreenImageViewController" automaticallyAdjustsScrollViewInsets="NO" id="n9T-Ug-9Da" customClass="FullScreenImageViewController" customModule="example_iTunesAPI_part2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="C0p-0k-g5C">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -916,7 +913,7 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="t7n-Xp-AKS">
                                 <rect key="frame" x="0.0" y="129" width="393" height="669"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="lj4-pr-erm">
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="lj4-pr-erm">
                                     <size key="itemSize" width="373" height="265"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -924,14 +921,14 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" reuseIdentifier="FullScreenImageCollectionViewCell" id="Anz-Do-5NK" customClass="FullScreenImageCollectionViewCell" customModule="example_iTunesAPI_part2" customModuleProvider="target">
-                                        <rect key="frame" x="10" y="0.0" width="373" height="265"/>
+                                        <rect key="frame" x="25" y="0.0" width="343" height="265"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="8l9-ho-yNL">
-                                            <rect key="frame" x="0.0" y="0.0" width="373" height="265"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="265"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VqN-pa-qZA">
-                                                    <rect key="frame" x="0.0" y="0.0" width="373" height="265"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="343" height="265"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
@@ -941,7 +938,7 @@
                                                 <constraint firstAttribute="bottom" secondItem="VqN-pa-qZA" secondAttribute="bottom" id="zRT-3u-Son"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="373" height="265"/>
+                                        <size key="customSize" width="343" height="265"/>
                                         <connections>
                                             <outlet property="fullScreenShot" destination="VqN-pa-qZA" id="oU7-7q-Vsd"/>
                                         </connections>
