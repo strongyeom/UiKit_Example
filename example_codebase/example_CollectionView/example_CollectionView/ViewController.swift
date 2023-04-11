@@ -55,8 +55,33 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
 // MARK: 사이즈를 정할 수있음 FlowLayout 인거 주의
 extension ViewController: UICollectionViewDelegateFlowLayout {
     
+    // 사이즈 조정
+    func collectionView(
+        _ collectionView: UICollectionView,
+        layout collectionViewLayout: UICollectionViewLayout,
+        sizeForItemAt indexPath: IndexPath
+    ) -> CGSize {
+        // 셀의 간격이 10이므로 count사이의 간격이므로 -30, + 가로로 여백을 왼쪽 5, 오른쪽 5이니까 - 10
+        return CGSize(width: (view.frame.width - 30 - 10)/4, height: (view.frame.width - 30 - 10)/4)
+    }
     
     // 양옆 사이즈 간격 0으로 조정
+    func collectionView(
+        _ collectionView: UICollectionView,
+        layout collectionViewLayout: UICollectionViewLayout,
+        minimumInteritemSpacingForSectionAt section: Int
+    ) -> CGFloat {
+        return 10
+    }
+   // 셀과 view와의 여백을 설정 할 수 있음
+    func collectionView(
+        _ collectionView: UICollectionView,
+        layout collectionViewLayout: UICollectionViewLayout,
+        insetForSectionAt section: Int
+    ) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
+    }
+    
 }
 
 
