@@ -14,26 +14,16 @@ class ViewController: UIViewController {
     let collectionView: UICollectionView = {
         let flowLayout = UICollectionViewFlowLayout()
         flowLayout.scrollDirection = .vertical
+        flowLayout.minimumLineSpacing = 20
         let collectionview = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
         return collectionview
     }()
     
-    let array: [Item] = [
-    Item(maintitle: "123", subtitle: "fsdfd"),
-    Item(maintitle: "mdklf", subtitle: "fsdfd"),
-    Item(maintitle: "vvpwe", subtitle: "fsdfd"),
-    Item(maintitle: "dqdq", subtitle: "fsdfd"),
-    Item(maintitle: "dmpom", subtitle: "fsdfd"),
-    Item(maintitle: "123", subtitle: "fsdfd"),
-    Item(maintitle: "mdklf", subtitle: "fsdfd"),
-    Item(maintitle: "vvpwe", subtitle: "fsdfd"),
-    Item(maintitle: "dqdq", subtitle: "fsdfd"),
-    Item(maintitle: "dmpom", subtitle: "fsdfd"),
-    Item(maintitle: "123", subtitle: "fsdfd"),
-    Item(maintitle: "mdklf", subtitle: "fsdfd"),
-    Item(maintitle: "vvpwe", subtitle: "fsdfd"),
-    Item(maintitle: "dqdq", subtitle: "fsdfd"),
-    Item(maintitle: "dmpom", subtitle: "fsdfd"),
+    let items: [Item] = [
+    Item(iconImageSting: "image1", appName: "안녕하세요1", appDescription: "여보sdasdasdsadsdsadsadasdddasdasdasdsadsdsadsadasdddasdssds세요1", reviewText: "리뷰입니다1"),
+    Item(iconImageSting: "image2", appName: "안녕하세요2", appDescription: "여보세요2", reviewText: "리뷰입니다2"),
+    Item(iconImageSting: "image3", appName: "안녕하세요3", appDescription: "여보세요3", reviewText: "리뷰입니다3"),
+    Item(iconImageSting: "image4", appName: "안녕하세요4", appDescription: "여보세요4", reviewText: "리뷰입니다4")
     ]
     
     
@@ -75,13 +65,18 @@ extension ViewController: UICollectionViewDataSource {
         _ collectionView: UICollectionView,
         numberOfItemsInSection section: Int
     ) -> Int {
-        return array.count
+        return items.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: CollectionViewCell.self), for: indexPath) as! CollectionViewCell
-        cell.appName.text = array[indexPath.row].maintitle
-        cell.subDescription.text = array[indexPath.row].subtitle
+        cell.iconImageView.image = UIImage(named: items[indexPath.row].iconImageSting)
+        cell.appName.text = items[indexPath.row].appName
+        cell.appDescription.text = items[indexPath.row].appDescription
+        cell.reviewText.text = items[indexPath.row].reviewText
+        cell.screenShot1.image = UIImage(named: "screenShot1")
+        cell.screenShot2.image = UIImage(named: "screenShot2")
+        cell.screenShot3.image = UIImage(named: "screenShot3")
         return cell
     }
 }
@@ -91,38 +86,8 @@ extension ViewController: UICollectionViewDelegateFlowLayout {
         layout collectionViewLayout: UICollectionViewLayout,
         sizeForItemAt indexPath: IndexPath
     ) -> CGSize {
-        CGSize(width: view.frame.width, height: 50)
+        CGSize(width: view.frame.width, height: 250)
     }
 }
-
-
-
-
-
-
-#if DEBUG
-
-import SwiftUI
-
-struct ViewControllerPresentable: UIViewControllerRepresentable {
-    func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
-    }
-    
-    func makeUIViewController(context: Context) -> some UIViewController {
-        ViewController()
-    }
-}
-
-
-struct ViewControllerPrepresentable_PreviewProvider : PreviewProvider {
-    static var previews: some View {
-        ViewControllerPresentable()
-            .previewDevice("iPhone 12 mini")
-            .previewDisplayName("iPhone 12 mini")
-            .ignoresSafeArea()
-    }
-}
-
-#endif
 
 

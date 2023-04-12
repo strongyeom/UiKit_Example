@@ -9,7 +9,9 @@ import Foundation
 
 struct Item {
     
-    var maintitle: String
-    var subtitle: String
+    var iconImageSting: String
+    var appName: String
+    var appDescription: String
+    var reviewText: String
     
 }
