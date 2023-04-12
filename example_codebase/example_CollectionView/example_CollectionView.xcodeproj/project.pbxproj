@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		262110BC29E6A1A900B9DEE7 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 262110BB29E6A1A900B9DEE7 /* Item.swift */; };
 		266AF47E29E58B5E001A3783 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266AF47D29E58B5E001A3783 /* AppDelegate.swift */; };
 		266AF48029E58B5E001A3783 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266AF47F29E58B5E001A3783 /* SceneDelegate.swift */; };
 		266AF48229E58B5E001A3783 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 266AF48129E58B5E001A3783 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		262110BB29E6A1A900B9DEE7 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		266AF47A29E58B5E001A3783 /* example_CollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = example_CollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		266AF47D29E58B5E001A3783 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		266AF47F29E58B5E001A3783 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 				266AF47F29E58B5E001A3783 /* SceneDelegate.swift */,
 				266AF48129E58B5E001A3783 /* ViewController.swift */,
 				266AF49129E58B8D001A3783 /* CollectionViewCell.swift */,
+				262110BB29E6A1A900B9DEE7 /* Item.swift */,
 				266AF48629E58B5F001A3783 /* Assets.xcassets */,
 				266AF48829E58B5F001A3783 /* LaunchScreen.storyboard */,
 				266AF48B29E58B5F001A3783 /* Info.plist */,
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				262110BC29E6A1A900B9DEE7 /* Item.swift in Sources */,
 				266AF48229E58B5E001A3783 /* ViewController.swift in Sources */,
 				266AF47E29E58B5E001A3783 /* AppDelegate.swift in Sources */,
 				266AF49229E58B8D001A3783 /* CollectionViewCell.swift in Sources */,
