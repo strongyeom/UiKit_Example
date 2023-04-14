@@ -140,6 +140,8 @@ extension ViewController: UICollectionViewDelegate {
     // cell이 눌러졌을때 액션
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let example = DetailViewController()
+        example.detailITunes = iTunesAPIs[indexPath.item]
+        //print(example.detailITunes)
         navigationController?.pushViewController(example, animated: true)
     }
 }
