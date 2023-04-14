@@ -18,6 +18,7 @@ class FirstCollectionViewCell: UICollectionViewCell {
         imageView.contentMode = .scaleToFill
         imageView.layer.cornerRadius = 12
         imageView.clipsToBounds = true
+        imageView.image = UIImage(named: "screenShot1")
         return imageView
     }()
     
