@@ -15,6 +15,7 @@
 		2646D21329E9A154000B965D /* TodayCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2646D21229E9A154000B965D /* TodayCollectionViewController.swift */; };
 		2646D21529E9A168000B965D /* AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2646D21429E9A168000B965D /* AppViewController.swift */; };
 		2646D21729E9A170000B965D /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2646D21629E9A170000B965D /* SearchViewController.swift */; };
+		2646D21C29E9AB0C000B965D /* TodayAccountCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2646D21B29E9AB0C000B965D /* TodayAccountCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		2646D21229E9A154000B965D /* TodayCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCollectionViewController.swift; sourceTree = "<group>"; };
 		2646D21429E9A168000B965D /* AppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewController.swift; sourceTree = "<group>"; };
 		2646D21629E9A170000B965D /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		2646D21B29E9AB0C000B965D /* TodayAccountCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayAccountCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,9 @@
 		2646D1FD29E99F5B000B965D /* example_CompositionalCollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				2646D21A29E9AAE9000B965D /* Model */,
+				2646D21929E9AAE7000B965D /* View */,
+				2646D21829E9AAE4000B965D /* Cell */,
 				2646D1FE29E99F5B000B965D /* AppDelegate.swift */,
 				2646D20029E99F5B000B965D /* SceneDelegate.swift */,
 				2646D20229E99F5B000B965D /* ViewController.swift */,
@@ -71,6 +76,28 @@
 				2646D20C29E99F5C000B965D /* Info.plist */,
 			);
 			path = example_CompositionalCollectionView;
+			sourceTree = "<group>";
+		};
+		2646D21829E9AAE4000B965D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				2646D21B29E9AB0C000B965D /* TodayAccountCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		2646D21929E9AAE7000B965D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2646D21A29E9AAE9000B965D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,6 +172,7 @@
 			files = (
 				2646D21729E9A170000B965D /* SearchViewController.swift in Sources */,
 				2646D21529E9A168000B965D /* AppViewController.swift in Sources */,
+				2646D21C29E9AB0C000B965D /* TodayAccountCollectionViewCell.swift in Sources */,
 				2646D20329E99F5B000B965D /* ViewController.swift in Sources */,
 				2646D1FF29E99F5B000B965D /* AppDelegate.swift in Sources */,
 				2646D21329E9A154000B965D /* TodayCollectionViewController.swift in Sources */,
