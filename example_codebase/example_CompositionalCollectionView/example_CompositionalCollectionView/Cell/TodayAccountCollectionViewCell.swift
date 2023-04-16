@@ -18,14 +18,16 @@ class TodayAccountCollectionViewCell: UICollectionViewCell {
         return label
     }()
     
-    // 투데이
-    var todayLabel: UILabel = {
+    // largeTitle
+    var largeTitle: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 34, weight: .medium)
         label.textColor = .black
         return label
     }()
     
+    // AccountProfileView
+    private lazy var accountProfileView = AccountProfileView()
     
     // 날짜 형식 변형 <- 이게 먼저 생성되고 1️⃣
     var currentDate: String {
@@ -35,6 +37,7 @@ class TodayAccountCollectionViewCell: UICollectionViewCell {
         return dataFormatter.string(from: Date())
     }
     
+   
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -46,17 +49,23 @@ class TodayAccountCollectionViewCell: UICollectionViewCell {
     }
     
     func setup() {
-        [dateLabel, todayLabel].forEach { addSubview($0)}
+        [dateLabel, largeTitle].forEach { addSubview($0)}
         
         
         NSLayoutConstraint.activate([
-            dateLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 10),
-            dateLabel.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 10),
+           
+            dateLabel.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
+            dateLabel.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
             
-            todayLabel.topAnchor.constraint(equalTo: dateLabel.bottomAnchor, constant: 10),
-            todayLabel.leadingAnchor.constraint(equalTo: dateLabel.leadingAnchor)
+            largeTitle.topAnchor.constraint(equalTo: dateLabel.bottomAnchor),
+            largeTitle.leadingAnchor.constraint(equalTo: dateLabel.leadingAnchor),
+            largeTitle.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -10),
         
-        
+            // account
+            accountProfileView.trailingAnchor.constraint(equalTo: dateLabel.trailingAnchor),
+            accountProfileView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -10),
+            accountProfileView.widthAnchor.constraint(equalToConstant: 30),
+            accountProfileView.heightAnchor.constraint(equalToConstant: 30)
         ])
         
         
