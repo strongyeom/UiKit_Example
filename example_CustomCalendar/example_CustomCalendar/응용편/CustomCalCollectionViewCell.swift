@@ -6,6 +6,7 @@ class CustomCalCollectionViewCell: UICollectionViewCell {
     var dayLabel: UILabel = {
         let title = UILabel()
         title.text = "1"
+        title.backgroundColor = .yellow
         title.font = UIFont.systemFont(ofSize: 12)
         return title
     }()
@@ -25,7 +26,7 @@ class CustomCalCollectionViewCell: UICollectionViewCell {
         
         NSLayoutConstraint.activate([
             dayLabel.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 5),
-            dayLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor)
+            dayLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
         ])
     }
 }
