@@ -62,7 +62,7 @@
 			children = (
 				26BFE1DC29ECFE8500FD5646 /* AppDelegate.swift */,
 				26BFE1DE29ECFE8500FD5646 /* SceneDelegate.swift */,
-				26BFE1F929ED5C2B00FD5646 /* 실전편 */,
+				26BFE1F929ED5C2B00FD5646 /* 기본편 */,
 				26BFE1F829ED5C2900FD5646 /* 응용편 */,
 				26BFE1E529ECFE8800FD5646 /* Assets.xcassets */,
 				26BFE1E729ECFE8800FD5646 /* LaunchScreen.storyboard */,
@@ -81,13 +81,13 @@
 			path = "응용편";
 			sourceTree = "<group>";
 		};
-		26BFE1F929ED5C2B00FD5646 /* 실전편 */ = {
+		26BFE1F929ED5C2B00FD5646 /* 기본편 */ = {
 			isa = PBXGroup;
 			children = (
 				26BFE1E029ECFE8500FD5646 /* ViewController.swift */,
 				26BFE1F629ED235B00FD5646 /* CalendarCollectionViewCell.swift */,
 			);
-			name = "실전편";
+			name = "기본편";
 			path = "첫번째 방법";
 			sourceTree = "<group>";
 		};
@@ -312,6 +312,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -339,6 +340,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

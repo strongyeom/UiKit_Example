@@ -255,11 +255,30 @@ extension CustomCalendarViewController: UICollectionViewDataSource, UICollection
         // cell 구현
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: String(describing: CustomCalCollectionViewCell.self), for: indexPath) as! CustomCalCollectionViewCell
         // 배열로 만들어진 String들을 dayLabel.text에 하나씩 넣어줍니다.
-        cell.dayLabel.text = days[indexPath.item]
+        let days = days[indexPath.item]
+        
+        
+        cell.dayLabel.text = days
         return cell
     }
-
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let cell = collectionView.cellForItem(at: indexPath)
+        
+        print("days 배열의 indexPath:",days[indexPath.item])
+        if !days[indexPath.item].isEmpty {
+            cell?.backgroundColor = .red
+        }
+        print("해당 버튼 didSelectItemAt 인덱스가 눌렸습니다. \(indexPath)")
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath)
+        cell?.backgroundColor = .clear
+        print("해당 버튼 didDeselectItemAt 인덱스가 눌렸습니다. \(indexPath)")
+    }
+
 }
 
 
@@ -289,6 +308,18 @@ extension CustomCalendarViewController {
         today()
     }
     
+    func today() {
+        // dateComponents : 표준 시간대를 사용하여 Calendar의 모든 날짜 구성요소를 반환
+        let components = calendar.dateComponents([.year, .month, .day], from: Date())
+        print("dateComponents",components)
+        // date : 지정된 구성 요소에서 생성된 날짜를 반환
+        calendarDate = calendar.date(from: components) ?? Date()
+        print("date",calendarDate)
+        // Calendar를 업데이트 해줍니다.
+        updateCalendar()
+    }
+    
+    
     // component()를 이용하면 1일은 일요일, 7은 토요일로 반환됩니다.
     // days 배열의 0번 인덱스를 일요일로 표시해주기 위하여 -1를 해준후 반환합니다.
     func startDayOftheWeek() -> Int {
@@ -298,13 +329,16 @@ extension CustomCalendarViewController {
     
     // 해당 달에 몇일까지 있는지 확인후 일수를 반환합니다.
     func endDate() -> Int {
+        print("endDate: \(calendar.range(of: .day, in: .month, for: calendarDate)?.count ?? Int())")
         return calendar.range(of: .day, in: .month, for: calendarDate)?.count ?? Int()
     }
     
     // dateFormatter를 이용하여 calendarDate를 설정한것 Maintitle에 적용시킵니다.
     func updateTitle() {
         // calendarDate의 자료형이 Date이기 때문에 자료형 -> String으로 변환
+        print("calendarDate: \(calendarDate)")
         let date = dateFormatter.string(from: calendarDate)
+        print("mainTitle에 적용 \(date)")
         titleLabel.text = date
         print(titleLabel.text ?? "")
     }
@@ -325,6 +359,7 @@ extension CustomCalendarViewController {
             }
             self.days.append("\(day - startOftheWeek + 1)")
         }
+        print("배열 생김: ",days)
         collectionView.reloadData()
     }
     
@@ -347,15 +382,4 @@ extension CustomCalendarViewController {
         calendarDate = calendar.date(byAdding: DateComponents(month: 1), to: calendarDate) ?? Date()
         updateCalendar()
     }
-    
-    func today() {
-        // dateComponents : 표준 시간대를 사용하여 Calendar의 모든 날짜 구성요소를 반환
-        let components = calendar.dateComponents([.year, .month, .day], from: Date())
-        // date : 지정된 구성 요소에서 생성된 날짜를 반환
-        calendarDate = calendar.date(from: components) ?? Date()
-        // Calendar를 업데이트 해줍니다.
-        updateCalendar()
-    }
-    
-    
 }
