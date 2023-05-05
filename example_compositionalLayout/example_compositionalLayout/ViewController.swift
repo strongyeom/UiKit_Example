@@ -88,27 +88,40 @@ extension ViewController {
             (sectionIndex: Int, layoutEnvironment: NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection? in
             
             // 아이템 -> 그룹 -> 섹션 형태로 이루어져 있음
+
+            // 사진 한장
+            let fullItem = NSCollectionLayoutItem(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1/4)))
+            fullItem.contentInsets = NSDirectionalEdgeInsets(top: 2, leading: 2, bottom: 2, trailing: 2)
             
-            // 아이템 사이즈
-            let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
             
-            // 위에서 만든 아이템 사이즈로 아이템 만들기
-            let item = NSCollectionLayoutItem(layoutSize: itemSize)
             
-            // 아이템 간의 간격 설정
-            item.contentInsets = NSDirectionalEdgeInsets(top: 2, leading: 2, bottom: 2, trailing: 2)
             
-            // 그룹의 높이를 변경 할 수있음 => 변경할 부분
-            let groupHeight = NSCollectionLayoutDimension.fractionalWidth(0.5)
+            // 사진 한장에 세로로 사진 두장
+            let mainitem = NSCollectionLayoutItem(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(2/3), heightDimension: .fractionalHeight(1.0)))
+
+            let pairItem = NSCollectionLayoutItem(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(0.5)))
             
-            // 그룹 사이즈
-            let groupSize = NSCollectionLayoutSize(widthDimension: groupHeight, heightDimension: groupHeight)
+            pairItem.contentInsets = NSDirectionalEdgeInsets(top: 2, leading: 2, bottom: 2, trailing: 2)
             
-            // 그룹 만들기 => 변경할 부분
-            let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, repeatingSubitem: item, count: 2)
+            let trailingGroup = NSCollectionLayoutGroup.vertical(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1/3), heightDimension: .fractionalHeight(1.0)), repeatingSubitem: pairItem, count: 2)
             
+            let mainWithPairGroup = NSCollectionLayoutGroup.horizontal(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalWidth(4/9)), subitems: [mainitem, trailingGroup])
+
+            // 사진 세장
+            let tripletItem = NSCollectionLayoutItem(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1/3), heightDimension: .fractionalHeight(1.0)))
+            tripletItem.contentInsets = NSDirectionalEdgeInsets(top: 2, leading: 2, bottom: 2, trailing: 2)
+            
+            let tripletGroup = NSCollectionLayoutGroup.horizontal(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(2/9)), subitems: [tripletItem, tripletItem, tripletItem])
+            
+            
+            // 사진 왼쪽에 세로두장 오른쪽에 한장
+            let mainWithPairReversedGroup = NSCollectionLayoutGroup.horizontal(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalWidth(4/9)), subitems: [trailingGroup, mainitem])
+            
+            
+            let nestedGroup = NSCollectionLayoutGroup.vertical(layoutSize: NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalWidth(16/9)), subitems: [fullItem, mainWithPairGroup, tripletGroup, mainWithPairReversedGroup])
+//
             // 그룹을 섹션으로 만들기
-            let section = NSCollectionLayoutSection(group: group)
+            let section = NSCollectionLayoutSection(group: nestedGroup)
            // section.orthogonalScrollingBehavior = .groupPaging
             section.contentInsets = NSDirectionalEdgeInsets(top: 20, leading: 20, bottom: 20, trailing: 20)
             return section
@@ -125,22 +138,22 @@ extension ViewController {
             // 아이템 -> 그룹 -> 섹션 형태로 이루어져 있음
             
             // 아이템 사이즈
-            let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
+            let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1/3), heightDimension: .fractionalHeight(1.0))
             
             // 위에서 만든 아이템 사이즈로 아이템 만들기
             let item = NSCollectionLayoutItem(layoutSize: itemSize)
             
             // 아이템 간의 간격 설정
-            item.contentInsets = NSDirectionalEdgeInsets(top: 2, leading: 2, bottom: 2, trailing: 2)
+           // item.contentInsets = NSDirectionalEdgeInsets(top: 2, leading: 2, bottom: 2, trailing: 2)
             
             // 그룹의 높이를 변경 할 수있음 => 변경할 부분
             let groupHeight = NSCollectionLayoutDimension.fractionalWidth(1/3)
             
             // 그룹 사이즈
-            let groupSize = NSCollectionLayoutSize(widthDimension: groupHeight, heightDimension: groupHeight)
+            let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: groupHeight)
             
             // 그룹 만들기 => 변경할 부분
-            let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, repeatingSubitem: item, count: 3)
+            let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item, item, item])
             
             // 그룹을 섹션으로 만들기
             let section = NSCollectionLayoutSection(group: group)
