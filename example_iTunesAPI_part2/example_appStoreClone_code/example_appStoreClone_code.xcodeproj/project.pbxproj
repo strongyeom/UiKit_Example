@@ -116,8 +116,7 @@
 		263731052A07CB9100F9A7D4 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				263731062A07CBA900F9A7D4 /* TodayAccountCollectionViewCell.swift */,
-				2637310A2A07D22F00F9A7D4 /* TodayLargeItemCollectionViewCell.swift */,
+				263731192A07E11300F9A7D4 /* Today */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -144,6 +143,15 @@
 			children = (
 				263731142A07DF0F00F9A7D4 /* TodayLargeItem.swift */,
 				263731172A07E09F00F9A7D4 /* TodayItem.swift */,
+			);
+			path = Today;
+			sourceTree = "<group>";
+		};
+		263731192A07E11300F9A7D4 /* Today */ = {
+			isa = PBXGroup;
+			children = (
+				263731062A07CBA900F9A7D4 /* TodayAccountCollectionViewCell.swift */,
+				2637310A2A07D22F00F9A7D4 /* TodayLargeItemCollectionViewCell.swift */,
 			);
 			path = Today;
 			sourceTree = "<group>";
