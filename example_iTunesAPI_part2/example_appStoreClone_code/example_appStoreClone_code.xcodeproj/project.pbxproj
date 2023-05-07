@@ -17,6 +17,7 @@
 		263730FF2A07BFB200F9A7D4 /* AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263730FE2A07BFB200F9A7D4 /* AppViewController.swift */; };
 		263731012A07BFD300F9A7D4 /* SearChViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263731002A07BFD300F9A7D4 /* SearChViewController.swift */; };
 		263731042A07C03800F9A7D4 /* String + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263731032A07C03800F9A7D4 /* String + Ext.swift */; };
+		263731072A07CBA900F9A7D4 /* TodayAccountCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263731062A07CBA900F9A7D4 /* TodayAccountCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		263730FE2A07BFB200F9A7D4 /* AppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewController.swift; sourceTree = "<group>"; };
 		263731002A07BFD300F9A7D4 /* SearChViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearChViewController.swift; sourceTree = "<group>"; };
 		263731032A07C03800F9A7D4 /* String + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Ext.swift"; sourceTree = "<group>"; };
+		263731062A07CBA900F9A7D4 /* TodayAccountCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayAccountCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 		263730E42A07BD5100F9A7D4 /* example_appStoreClone_code */ = {
 			isa = PBXGroup;
 			children = (
+				263731052A07CB9100F9A7D4 /* Cell */,
 				263731022A07C02D00F9A7D4 /* String + Ext */,
 				263730E52A07BD5100F9A7D4 /* AppDelegate.swift */,
 				263730E72A07BD5100F9A7D4 /* SceneDelegate.swift */,
@@ -93,6 +96,14 @@
 				263731032A07C03800F9A7D4 /* String + Ext.swift */,
 			);
 			path = "String + Ext";
+			sourceTree = "<group>";
+		};
+		263731052A07CB9100F9A7D4 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				263731062A07CBA900F9A7D4 /* TodayAccountCollectionViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,6 +181,7 @@
 				263730FF2A07BFB200F9A7D4 /* AppViewController.swift in Sources */,
 				263731042A07C03800F9A7D4 /* String + Ext.swift in Sources */,
 				263730EA2A07BD5100F9A7D4 /* RootTabBarViewController.swift in Sources */,
+				263731072A07CBA900F9A7D4 /* TodayAccountCollectionViewCell.swift in Sources */,
 				263730E62A07BD5100F9A7D4 /* AppDelegate.swift in Sources */,
 				263730FB2A07BF7800F9A7D4 /* TodayCollectionViewController.swift in Sources */,
 				263730E82A07BD5100F9A7D4 /* SceneDelegate.swift in Sources */,

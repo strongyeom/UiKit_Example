@@ -24,7 +24,9 @@ class RootTabBarViewController: UITabBarController {
     
     // 탭바 아이템 설정
     func setupTabBarItem() {
+        // 메인 화면
         let todayViewController = TodayCollectionViewController(collectionViewLayout: UICollectionViewLayout())
+        // 탭의 이미지와 텍스트 설정
         todayViewController.tabBarItem = UITabBarItem(
             title: "today_title".localized,
             image: UIImage(systemName: "doc.richtext"),
@@ -44,14 +46,12 @@ class RootTabBarViewController: UITabBarController {
             image: UIImage(systemName: "magnifyingglass"),
             selectedImage: UIImage(systemName: "magnifyingglass.fill"))
         
-        // Tabbar에 어떤 것들을 사용할것인지 적어주기 빼먹지 말고
+        // Tabbar에 어떤 것들을 사용할것인지 적어주기
         viewControllers = [
             todayViewController,
             appViewController,
             searchViewController
         ]
-        
     }
-
 }
 
