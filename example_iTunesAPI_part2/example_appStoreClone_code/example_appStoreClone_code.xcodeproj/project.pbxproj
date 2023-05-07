@@ -24,6 +24,10 @@
 		263731122A07D7D100F9A7D4 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263731112A07D7D100F9A7D4 /* ImageCache.swift */; };
 		263731152A07DF0F00F9A7D4 /* TodayLargeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263731142A07DF0F00F9A7D4 /* TodayLargeItem.swift */; };
 		263731182A07E09F00F9A7D4 /* TodayItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263731172A07E09F00F9A7D4 /* TodayItem.swift */; };
+		2637311B2A07E92300F9A7D4 /* TodaySmallItemCollectionHearderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2637311A2A07E92300F9A7D4 /* TodaySmallItemCollectionHearderView.swift */; };
+		2637311D2A07EBE000F9A7D4 /* TodaySmallItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2637311C2A07EBE000F9A7D4 /* TodaySmallItemCollectionViewCell.swift */; };
+		2637311F2A07F22B00F9A7D4 /* TodaySmallItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2637311E2A07F22B00F9A7D4 /* TodaySmallItem.swift */; };
+		263731212A07F38200F9A7D4 /* TodaySmallItemBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263731202A07F38200F9A7D4 /* TodaySmallItemBackgroundView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +50,10 @@
 		263731112A07D7D100F9A7D4 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		263731142A07DF0F00F9A7D4 /* TodayLargeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayLargeItem.swift; sourceTree = "<group>"; };
 		263731172A07E09F00F9A7D4 /* TodayItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayItem.swift; sourceTree = "<group>"; };
+		2637311A2A07E92300F9A7D4 /* TodaySmallItemCollectionHearderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodaySmallItemCollectionHearderView.swift; sourceTree = "<group>"; };
+		2637311C2A07EBE000F9A7D4 /* TodaySmallItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodaySmallItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		2637311E2A07F22B00F9A7D4 /* TodaySmallItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodaySmallItem.swift; sourceTree = "<group>"; };
+		263731202A07F38200F9A7D4 /* TodaySmallItemBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodaySmallItemBackgroundView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +151,7 @@
 			children = (
 				263731142A07DF0F00F9A7D4 /* TodayLargeItem.swift */,
 				263731172A07E09F00F9A7D4 /* TodayItem.swift */,
+				2637311E2A07F22B00F9A7D4 /* TodaySmallItem.swift */,
 			);
 			path = Today;
 			sourceTree = "<group>";
@@ -152,6 +161,9 @@
 			children = (
 				263731062A07CBA900F9A7D4 /* TodayAccountCollectionViewCell.swift */,
 				2637310A2A07D22F00F9A7D4 /* TodayLargeItemCollectionViewCell.swift */,
+				2637311A2A07E92300F9A7D4 /* TodaySmallItemCollectionHearderView.swift */,
+				2637311C2A07EBE000F9A7D4 /* TodaySmallItemCollectionViewCell.swift */,
+				263731202A07F38200F9A7D4 /* TodaySmallItemBackgroundView.swift */,
 			);
 			path = Today;
 			sourceTree = "<group>";
@@ -232,15 +244,19 @@
 				263731102A07D46800F9A7D4 /* DownloadableImageView.swift in Sources */,
 				263731012A07BFD300F9A7D4 /* SearChViewController.swift in Sources */,
 				263730FF2A07BFB200F9A7D4 /* AppViewController.swift in Sources */,
+				2637311B2A07E92300F9A7D4 /* TodaySmallItemCollectionHearderView.swift in Sources */,
 				263731042A07C03800F9A7D4 /* String + Ext.swift in Sources */,
 				263730EA2A07BD5100F9A7D4 /* RootTabBarViewController.swift in Sources */,
 				263731152A07DF0F00F9A7D4 /* TodayLargeItem.swift in Sources */,
+				2637311F2A07F22B00F9A7D4 /* TodaySmallItem.swift in Sources */,
 				263731072A07CBA900F9A7D4 /* TodayAccountCollectionViewCell.swift in Sources */,
 				263730E62A07BD5100F9A7D4 /* AppDelegate.swift in Sources */,
 				263731182A07E09F00F9A7D4 /* TodayItem.swift in Sources */,
 				263730FB2A07BF7800F9A7D4 /* TodayCollectionViewController.swift in Sources */,
 				2637310B2A07D22F00F9A7D4 /* TodayLargeItemCollectionViewCell.swift in Sources */,
+				263731212A07F38200F9A7D4 /* TodaySmallItemBackgroundView.swift in Sources */,
 				263730E82A07BD5100F9A7D4 /* SceneDelegate.swift in Sources */,
+				2637311D2A07EBE000F9A7D4 /* TodaySmallItemCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

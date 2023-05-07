@@ -50,6 +50,7 @@ class TodayLargeItemCollectionViewCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        setupLayout()
     }
     
     required init?(coder: NSCoder) {
@@ -88,31 +89,32 @@ class TodayLargeItemCollectionViewCell: UICollectionViewCell {
             bottomTitle.leadingAnchor.constraint(equalTo: subTitle.leadingAnchor),
             bottomTitle.trailingAnchor.constraint(equalTo: subTitle.trailingAnchor),
             bottomTitle.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -20)
-            
-            // 그림자 설정
-            self.layer.shadowColor = UIColor.black.cgColor
-            self.layer.shadowOffset = .zero
-            self.layer.shadowOpacity = 0.5
-            self.layer.shadowRadius = 10
-            self.layer.masksToBounds = false
         ])
         
-        func setup(largeItem: TodayLargeItem) {
-            
-            // 이미지 또는 url를 받아 보여줍니다.
-            if let imageUrl = largeItem.imageURL {
-                imageView.downloadImage(url: imageUrl)
-            } else if let image = largeItem.image {
-                imageView.image = image
-            }
-            
-            subTitle.text = largeItem.subText
-            subTitle.textColor = .largeItem.subTitleColor
-            mainTitle.text = largeItem.mainText
-            mainTitle.textColor = .largeItem.mainTitleColor
-            bottomTitle.text = largeItem.bottomText
-            bottomTitle.textColor = .largeItem.bottomTitleColor
+        // 그림자 설정
+        self.layer.shadowColor = UIColor.black.cgColor
+        self.layer.shadowOffset = .zero
+        self.layer.shadowOpacity = 0.5
+        self.layer.shadowRadius = 10
+        self.layer.masksToBounds = false
+        
+    }
+    
+    func setup(largeItem: TodayLargeItem) {
+        
+        // 이미지 또는 url를 받아 보여줍니다.
+        if let imageUrl = largeItem.imageURL {
+            imageView.downloadImage(url: imageUrl)
+        } else if let image = largeItem.image {
+            imageView.image = image
         }
+        
+        subTitle.text = largeItem.subText
+        subTitle.textColor = largeItem.subTitleColor
+        mainTitle.text = largeItem.mainText
+        mainTitle.textColor = largeItem.mainTitleColor
+        bottomTitle.text = largeItem.bottomText
+        bottomTitle.textColor = largeItem.bottomTitleColor
     }
     
     // 이미지랑 텍스트를 초기화

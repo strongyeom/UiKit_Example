@@ -5,7 +5,7 @@
 //  Created by 염성필 on 2023/05/07.
 //
 
-import Foundation
+import UIKit
 
 struct TodayLargeItem {
     var subText: String
