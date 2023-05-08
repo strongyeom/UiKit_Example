@@ -116,7 +116,7 @@ class TodaySmallItemCollectionViewCell: UICollectionViewCell {
         
         self.mainText.text = item.mainText
         self.subText.text = item.subText
-        self.inAppPurchaseText.text = item.isInAppPurchase
+        self.inAppPurchaseText.text = "in_app_purchase".localized
         
         
     }

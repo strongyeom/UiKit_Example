@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		260BFF032A08C90C00F1E8B0 /* RandomData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 260BFF022A08C90C00F1E8B0 /* RandomData.swift */; };
 		263730E62A07BD5100F9A7D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263730E52A07BD5100F9A7D4 /* AppDelegate.swift */; };
 		263730E82A07BD5100F9A7D4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263730E72A07BD5100F9A7D4 /* SceneDelegate.swift */; };
 		263730EA2A07BD5100F9A7D4 /* RootTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263730E92A07BD5100F9A7D4 /* RootTabBarViewController.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		260BFF022A08C90C00F1E8B0 /* RandomData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomData.swift; sourceTree = "<group>"; };
 		263730E22A07BD5100F9A7D4 /* example_appStoreClone_code.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = example_appStoreClone_code.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		263730E52A07BD5100F9A7D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		263730E72A07BD5100F9A7D4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				2637310C2A07D2E000F9A7D4 /* Colors.xcassets */,
 				263730F02A07BD5300F9A7D4 /* LaunchScreen.storyboard */,
 				263730F32A07BD5300F9A7D4 /* Info.plist */,
+				260BFF022A08C90C00F1E8B0 /* RandomData.swift */,
 			);
 			path = example_appStoreClone_code;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 				263730FF2A07BFB200F9A7D4 /* AppViewController.swift in Sources */,
 				2637311B2A07E92300F9A7D4 /* TodaySmallItemCollectionHearderView.swift in Sources */,
 				263731042A07C03800F9A7D4 /* String + Ext.swift in Sources */,
+				260BFF032A08C90C00F1E8B0 /* RandomData.swift in Sources */,
 				263730EA2A07BD5100F9A7D4 /* RootTabBarViewController.swift in Sources */,
 				263731152A07DF0F00F9A7D4 /* TodayLargeItem.swift in Sources */,
 				2637311F2A07F22B00F9A7D4 /* TodaySmallItem.swift in Sources */,

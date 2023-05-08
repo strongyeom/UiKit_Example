@@ -10,7 +10,7 @@ import UIKit
 struct TodaySmallItem {
     var mainText: String
     var subText: String
-    var isInAppPurchase: String
+    var isInAppPurchase: Bool
     var isInstalled: Bool
     
     var imageURL: String?
