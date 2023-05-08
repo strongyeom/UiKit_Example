@@ -22,22 +22,16 @@ class TodayCollectionViewController: UICollectionViewController {
     var items: [TodayItem] = []
     
 
+    
+    // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-      setupLayout()
+        setupLayout()
+        setupCollectionView()
+        setupData()
     }
     
-    // 스크롤 위치에 따른 색상 및 isHidden 처리
-    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let isStatusBarHidden = scrollView.contentOffset.y < 0
-        if isStatusBarHidden {
-            statusBarView.backgroundColor = .clear
-        } else {
-            statusBarView.backgroundColor = .systemBackground
-        }
-        statusBarView.isHidden = isStatusBarHidden
-    }
-    
+
     private func setupLayout() {
         view.backgroundColor = .black
         
@@ -66,10 +60,10 @@ extension TodayCollectionViewController {
         collectionView.register(TodaySmallItemCollectionViewCell.self, forCellWithReuseIdentifier: String(describing: TodaySmallItemCollectionViewCell.self))
         
         // header
-        collectionView.register(TodaySmallItemCollectionHearderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: String(describing: TodaySmallItemCollectionHearderView.self))
+        collectionView.register(TodaySmallItemCollectionHearderView.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: String(describing: TodaySmallItemCollectionViewCell.self))
         
         // section background
-        collectionView.collectionViewLayout.register(TodaySmallItemBackgroundView.self, forDecorationViewOfKind: String(describing: TodaySmallItemBackgroundView.self))
+        collectionView.collectionViewLayout.register(TodaySmallItemBackgroundView.self, forDecorationViewOfKind: todaySmallItemSectionBackground)
     }
 }
 
@@ -218,7 +212,7 @@ extension TodayCollectionViewController {
 }
 
 extension TodayCollectionViewController {
-    private func setData() {
+    private func setupData() {
         items = [
             TodayItem(type: .accountProfile, items: ["myAccount"]),
             
