@@ -44,6 +44,7 @@ class AppViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLayout()
+        setupData()
         
     }
     
@@ -58,7 +59,7 @@ class AppViewController: UIViewController {
             collectionView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             collectionView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
             collectionView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor)
-        
+            
         ])
         
     }
@@ -112,8 +113,8 @@ class AppViewController: UIViewController {
         //group
         let groupSize = NSCollectionLayoutSize(widthDimension: .absolute(view.frame.width - (sectionMargin * 2)), heightDimension: .estimated(250))
         let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, repeatingSubitem: item, count: 3)
-
-//        group.contentInsets = .init(top: 0, leading: 0, bottom: 0, trailing: 0)
+        
+        //        group.contentInsets = .init(top: 0, leading: 0, bottom: 0, trailing: 0)
         
         //section
         let section = NSCollectionLayoutSection(group: group)
@@ -186,5 +187,201 @@ extension AppViewController: UICollectionViewDataSource {
             return headerView
         }
         return UICollectionReusableView()
+    }
+}
+extension AppViewController {
+    private func setupData() {
+        sections = [
+            AppItem(type: .largeItem,
+                    items: [
+                        AppLargeItem(subText: "2021 App Store Awards",
+                                     mainText: "Yummy Project",
+                                     mainInfoText: "이게 앱 스토어 클론이다.",
+                                     subTextColor: .link,
+                                     mainTextColor: .label,
+                                     mainInfoTextColor: .label,
+                                     imageURL: nil,
+                                     image: RandomData.image),
+                        AppLargeItem(subText: "2021 App Store Awards",
+                                     mainText: "Yummy Project",
+                                     mainInfoText: "예시용 앱 클론이다.",
+                                     subTextColor: .link,
+                                     mainTextColor: .label,
+                                     mainInfoTextColor: .label,
+                                     imageURL: nil,
+                                     image: RandomData.image),
+                        AppLargeItem(subText: "2021 App Store Awards",
+                                     mainText: "Yummy Project",
+                                     mainInfoText: "예시용2 앱 클론이다.",
+                                     subTextColor: .link,
+                                     mainTextColor: .label,
+                                     mainInfoTextColor: .label,
+                                     imageURL: nil,
+                                     image: RandomData.image)
+                    ],
+                    subText: "",
+                    mainText: "",
+                    mainInfoText: ""
+                   ),
+            AppItem(type: .smallItem,
+                    items: [
+                        AppSmallItem(mainTitle: "랜덤 Project",
+                                     subTitle: "아이유 - 좋은날",
+                                     isInAppPurchase: RandomData.boolean,
+                                     isInstalled: RandomData.boolean,
+                                     imageURL: nil,
+                                     image: RandomData.image),
+                        AppSmallItem(mainTitle: "랜덤 Project",
+                                     subTitle: "미쓰에이 - 수지",
+                                     isInAppPurchase: RandomData.boolean,
+                                     isInstalled: RandomData.boolean,
+                                     imageURL: nil,
+                                     image: RandomData.image),
+                        AppSmallItem(mainTitle: "랜덤 Project",
+                                     subTitle: "디셈버 - 별이 될게",
+                                     isInAppPurchase: RandomData.boolean,
+                                     isInstalled: RandomData.boolean,
+                                     imageURL: nil,
+                                     image: RandomData.image),
+                        AppSmallItem(mainTitle: "랜덤 Project",
+                                     subTitle: "오늘은 5월 10일",
+                                     isInAppPurchase: RandomData.boolean,
+                                     isInstalled: RandomData.boolean,
+                                     imageURL: nil,
+                                     image: RandomData.image),
+                        AppSmallItem(mainTitle: "랜덤 Project",
+                                     subTitle: "선우정아 - 도망가자",
+                                     isInAppPurchase: RandomData.boolean,
+                                     isInstalled: RandomData.boolean,
+                                     imageURL: nil,
+                                     image: RandomData.image),
+                        AppSmallItem(mainTitle: "랜덤 Project",
+                                     subTitle: "쇼미더머니",
+                                     isInAppPurchase: RandomData.boolean,
+                                     isInstalled: RandomData.boolean,
+                                     imageURL: nil,
+                                     image: RandomData.image),
+                        
+                    ],
+                    mainText: "다양한 Project",
+                    isAllShowButton: RandomData.boolean),
+            AppItem(
+                type: .smallItem,
+                items: [
+                    AppSmallItem(
+                        mainTitle: "랜덤 skillist",
+                        subTitle: "난 모두가 잘 되길 빌어",
+                        isInAppPurchase: RandomData.boolean,
+                        isInstalled: RandomData.boolean,
+                        imageURL: nil,
+                        image: RandomData.image
+                    ),
+                    AppSmallItem(
+                        mainTitle: "랜덤 skillist",
+                        subTitle: "이 말이 거짓말 같다 해도",
+                        isInAppPurchase: RandomData.boolean,
+                        isInstalled: RandomData.boolean,
+                        imageURL: nil,
+                        image: RandomData.image
+                    ),
+                    AppSmallItem(
+                        mainTitle: "랜덤 skillist",
+                        subTitle: "확실한건 더이상",
+                        isInAppPurchase: RandomData.boolean,
+                        isInstalled: RandomData.boolean,
+                        imageURL: nil,
+                        image: RandomData.image
+                    ),
+                    AppSmallItem(
+                        mainTitle: "랜덤 skillist",
+                        subTitle: "상처를 주기 싫어",
+                        isInAppPurchase: RandomData.boolean,
+                        isInstalled: RandomData.boolean,
+                        imageURL: nil,
+                        image: RandomData.image
+                    ),
+                    AppSmallItem(
+                        mainTitle: "랜덤 skillist",
+                        subTitle: "이제와서 보니 세상이",
+                        isInAppPurchase: RandomData.boolean,
+                        isInstalled: RandomData.boolean,
+                        imageURL: nil,
+                        image: RandomData.image
+                    ),
+                    AppSmallItem(
+                        mainTitle: "랜덤 skillist",
+                        subTitle: "우릴 만들었단 생각이 들어",
+                        isInAppPurchase: RandomData.boolean,
+                        isInstalled: RandomData.boolean,
+                        imageURL: nil,
+                        image: RandomData.image
+                    ),
+                    AppSmallItem(
+                        mainTitle: "랜덤 skillist",
+                        subTitle: "얻은것보다도 잃은게",
+                        isInAppPurchase: RandomData.boolean,
+                        isInstalled: RandomData.boolean,
+                        imageURL: nil,
+                        image: RandomData.image
+                    ),
+                    AppSmallItem(
+                        mainTitle: "랜덤 skillist",
+                        subTitle: "많은것 같어 사실 너도 ",
+                        isInAppPurchase: RandomData.boolean,
+                        isInstalled: RandomData.boolean,
+                        imageURL: nil,
+                        image: RandomData.image
+                    ),
+                    AppSmallItem(
+                        mainTitle: "랜덤 skillist",
+                        subTitle: "알잖아",
+                        isInAppPurchase: RandomData.boolean,
+                        isInstalled: RandomData.boolean,
+                        imageURL: nil,
+                        image: RandomData.image
+                    )
+                ],
+                mainText: "내일이 오면",
+                isAllShowButton: RandomData.boolean
+            ),
+            AppItem(
+                type: .largeItem,
+                items: [
+                    AppLargeItem(
+                        subText: "너와 나의 메모리 - 베이식",
+                        mainText: "2007년의 슈퍼루키",
+                        mainInfoText: "국힙의 미래가 내 대명사",
+                        subTextColor: .link,
+                        mainTextColor: .label,
+                        mainInfoTextColor: .label,
+                        imageURL: nil,
+                        image: RandomData.image
+                    ),
+                    AppLargeItem(
+                        subText: "너와 나의 메모리 - 쿤타",
+                        mainText: "좁은 골목길을 들어가면",
+                        mainInfoText: "빛이 반만 드는 창에 우리가보여",
+                        subTextColor: .link,
+                        mainTextColor: .label,
+                        mainInfoTextColor: .label,
+                        imageURL: nil,
+                        image: RandomData.image
+                    ),
+                    AppLargeItem(
+                        subText: "너와 나의 메모리 - 쿤타",
+                        mainText: "감옥같은 방에 빛이 들어오면",
+                        mainInfoText: "막연한 오늘의 희망이 잠깐 보여",
+                        subTextColor: .link,
+                        mainTextColor: .label,
+                        mainInfoTextColor: .label,
+                        imageURL: nil,
+                        image: RandomData.image
+                    )
+                ],
+                subText: "",
+                mainText: "",
+                mainInfoText: ""
+            )
+        ]
     }
 }
