@@ -11,40 +11,48 @@ class ViewController: UIViewController {
     
     
     // MARK: - Properties
+
+    private var leftView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .systemGray5
+        return view
+    }()
     
-    
-    private var subTitle: UILabel = {
+    private var leftMainTitle: UILabel = {
         let label = UILabel()
-        label.textColor = .darkGray
-        label.font = UIFont.systemFont(ofSize: 20, weight: .semibold)
-        label.text = "여기는 앱의 목록이에요."
+        label.textColor = .orange
+        label.text = "당근이세요?"
+        label.font = UIFont.systemFont(ofSize: 25, weight: .semibold)
         return label
     }()
     
-    private var mainTitle: UILabel = {
+    private var leftSubTitle: UILabel = {
         let label = UILabel()
-        label.textColor = .darkGray
-        label.font = UIFont.systemFont(ofSize: 30, weight: .semibold)
-        label.text = "열심히 하자"
+        label.textColor = .orange
+        label.text = "오빠"
+        label.font = UIFont.systemFont(ofSize: 30, weight: .bold)
         return label
     }()
     
+    private var rightView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .orange
+        return view
+    }()
     
-    private var subText: UILabel = {
+    private var rightMainTitle: UILabel = {
         let label = UILabel()
-        label.text = "서브 텍스트"
-        label.textColor = .link
-        label.backgroundColor = .yellow
-        label.font = UIFont.systemFont(ofSize: 15)
+        label.textColor = .white
+        label.text = "당근이지!"
+        label.font = UIFont.systemFont(ofSize: 25, weight: .semibold)
         return label
     }()
     
-    private var mainText: UILabel = {
+    private var rightSubTitle: UILabel = {
         let label = UILabel()
-        label.text = "메인 텍스트메인 텍스트메인 텍스트메인 텍스트메인 텍스트"
-        label.textColor = .link
-        label.backgroundColor = .blue
-        label.font = UIFont.systemFont(ofSize: 30, weight: .semibold)
+        label.textColor = .white
+        label.text = "아재"
+        label.font = UIFont.systemFont(ofSize: 30, weight: .bold)
         return label
     }()
     
@@ -55,17 +63,6 @@ class ViewController: UIViewController {
         return image
     }()
     
-    private var clickButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setTitle("button", for: .normal)
-        button.setTitleColor(.link, for: .normal)
-        button.backgroundColor = .gray
-        button.layer.cornerRadius = 8
-        button.clipsToBounds = true
-        return button
-    }()
-    
-    
     // MARK: - LiftCycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,46 +71,27 @@ class ViewController: UIViewController {
     }
     
     private func setupLayout() {
-        view.addSubview(subText)
-        view.addSubview(mainText)
-        view.addSubview(imageView)
-        view.addSubview(clickButton)
-        view.addSubview(subTitle)
-        view.addSubview(mainTitle)
         
-        subText.translatesAutoresizingMaskIntoConstraints = false
-        mainText.translatesAutoresizingMaskIntoConstraints = false
-        imageView.translatesAutoresizingMaskIntoConstraints = false
-        clickButton.translatesAutoresizingMaskIntoConstraints = false
-        subTitle.translatesAutoresizingMaskIntoConstraints = false
-        mainTitle.translatesAutoresizingMaskIntoConstraints = false
+        view.addSubview(leftView)
+        view.addSubview(leftMainTitle)
+        view.addSubview(leftSubTitle)
+        view.addSubview(rightView)
+        view.addSubview(rightMainTitle)
+        view.addSubview(rightSubTitle)
         
+        leftView.translatesAutoresizingMaskIntoConstraints = false
+        leftMainTitle.translatesAutoresizingMaskIntoConstraints = false
+        leftSubTitle.translatesAutoresizingMaskIntoConstraints = false
+        rightView.translatesAutoresizingMaskIntoConstraints = false
+        rightMainTitle.translatesAutoresizingMaskIntoConstraints = false
+        rightSubTitle.translatesAutoresizingMaskIntoConstraints = false
+      
         NSLayoutConstraint.activate([
             
-            subTitle.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 10),
-            subTitle.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
-            subTitle.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -10),
-            
-            mainTitle.leadingAnchor.constraint(equalTo: subTitle.leadingAnchor),
-            mainTitle.topAnchor.constraint(equalTo: subTitle.bottomAnchor, constant: 10),
-            mainTitle.trailingAnchor.constraint(equalTo: subTitle.trailingAnchor),
-            
-            imageView.widthAnchor.constraint(equalToConstant: 80),
-            imageView.heightAnchor.constraint(equalToConstant: 80),
-            imageView.topAnchor.constraint(equalTo: mainTitle.bottomAnchor, constant: 10),
-            imageView.leadingAnchor.constraint(equalTo: subTitle.leadingAnchor),
-            
-            subText.topAnchor.constraint(equalTo: imageView.topAnchor),
-            subText.leadingAnchor.constraint(equalTo: imageView.trailingAnchor, constant: 10),
-            subText.trailingAnchor.constraint(equalTo: mainText.trailingAnchor),
-            
-            mainText.leadingAnchor.constraint(equalTo: subText.leadingAnchor),
-            mainText.topAnchor.constraint(equalTo:  subText.bottomAnchor, constant: 10),
-            mainText.trailingAnchor.constraint(equalTo: clickButton.leadingAnchor, constant: -10),
-            
-            clickButton.centerYAnchor.constraint(equalTo: imageView.centerYAnchor),
-            clickButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -10),
-            clickButton.widthAnchor.constraint(equalToConstant: 70)
+            leftView.widthAnchor
+            leftView.heightAnchor
+            leftView.leadingAnchor
+            leftView.topAnchor
         ])
     }
 
